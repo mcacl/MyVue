@@ -12,8 +12,8 @@
     "jquery": "^3.4.1",
     "semantic-ui-css": "^2.4.1",
     "vue": "^2.6.10",
-    "vue-router": "^3.0.6",
-    "vue-verify-plugin": "^2.0.8"
+    "vue-router": "^3.0.7",
+    "vue-verify-plugin": "^2.0.9"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.8.0",
@@ -21,7 +21,7 @@
     "@vue/cli-service": "^3.8.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
+    "eslint-plugin-vue": "^5.2.3",
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
