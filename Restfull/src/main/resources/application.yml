@@ -1,0 +1,11 @@
+server:
+  port: 8111
+spring:
+  datasource:
+#    bdcinfo:
+#      driver-class-name: "oracle.jdbc.OracleDriver"
+#      url: "jdbc:oracle:thin:@192.168.0.182:1521:bdc"
+#      data-password: "1"
+#      data-username: "bdcinfo"
+
+

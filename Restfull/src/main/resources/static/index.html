@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<button onclick="test()">test</button>
+<button onclick="zr()">转让</button>
+<button onclick="dy()">抵押</button>
+<p id="msgzr"></p>
+</body>
+<script type="text/javascript">
+    function test() {
+        var url = "http://localhost:8111/bdcInterface/test";
+        var data = {};
+        post(url, data);
+    }
+
+    function zr() {
+        var url = "http://localhost:8111/bdcInterface/landTransfer";
+        var data = '{"landTransferInfo": {\"jyLx\": \"转让类型1转让2分割转让3更名4合并5分立\",\"resource\": [{\"ywrXm\": \"转让方姓名\",\"ywrZjlx\": \"转让方证件类\"}]}}';
+        data = '{\"jyLx\": \"转让类型1转让2分割转让3更名4合并5分立\",\"resource\": [{\"ywrXm\": \"转让方姓名\",\"ywrZjlx\": \"转让方证件类\"}]}';
+        post(url, data);
+    }
+
+    function dy() {
+        var url = "http://localhost:8111/bdcInterface/landMortgage";
+        var data = '{"landTransferInfo": "{\"jyLx\": \"转让类型1转让2分割转让3更名4合并5分立\",\"ywrXm\": \"转让方姓名\",\"ywrZjlx\": \"转让方证件类\"}"}';
+        data = '{\"jyLx\": \"转让类型1转让2分割转让3更名4合并5分立\",\"ywrXm\": \"转让方姓名\",\"ywrZjlx\": \"转让方证件类\"}';
+        post(url, data);
+    }
+
+    function post(url, data) {
+        $.post({
+            url: url,
+            contentType: "application/json;charset=utf8",
+            data: data,
+            dataType: "json",
+            success: function (data) {
+                $('#msgzr').text(JSON.stringify(data));
+            },
+            error: function (er) {
+                $('#msgzr').text(er.responseText);
+            }
+        });
+    }
+</script>
+</html>
