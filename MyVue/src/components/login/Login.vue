@@ -1,48 +1,28 @@
 <template>
-    <div class="ui middle aligned center aligned grid">
-        <div class="column">
-            <h2 class="ui teal image header">
-                <img src="../../assets/ico/logo.png" class="image">
-                <div class="content">
-
-                </div>
-            </h2>
-            <form class="ui large form ">
-                <div class="ui stacked segment">
-                    <div class="field">
-                        <div class="ui left icon input">
-                            <i class="user icon"></i>
-                            <input type="text" name="user" placeholder="邮箱或手机号码" v-model="user"
-                                   v-verify.login="user">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <div class="ui left icon input">
-                            <i class="lock icon"></i>
-                            <input type="password" name="pas" placeholder="密码" v-model="pas"
-                                   v-verify.login="pas">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <div class="ui checkbox">
-                            <input type="checkbox" class="" name="rememb" v-model="rememb">
-                            <label @click="">记住密码？</label>
-                        </div>
-                    </div>
-                    <div class="ui fluid large teal submit button" @click.prevent="login">登 录</div>
-                </div>
-                <div class="ui" style="background-color: #e0b4b4">
-                    <ul class="list">
-                        <li v-remind="user"></li>
-                        <li v-remind="pas"></li>
-                    </ul>
-                </div>
-                <ul></ul>
-            </form>
-            <div class="ui message">
-                已有账号? <a href="#">登 录</a>
-            </div>
-        </div>
+    <div style="width: 300px;margin: 18% auto;text-align: center;">
+        <Content style="min-height: 200px;">
+            <Form ref="us" :model="us" :rules="usrule"
+                  style="padding: 35px 20px 10px;" :style="comcolor">
+                <FormItem prop="user">
+                    <Input type="text" v-model="us.user" placeholder="用户名">
+                    <Icon type="ios-person-outline" slot="prepend"></Icon>
+                    </Input>
+                </FormItem>
+                <FormItem prop="pas">
+                    <Input type="password" v-model="us.pas" placeholder="密码">
+                    <Icon type="ios-lock-outline" slot="prepend"></Icon>
+                    </Input>
+                </FormItem>
+                <FormItem>
+                    <CheckboxGroup v-model="us.rememb">
+                        <Checkbox label="记住密码？"></Checkbox>
+                    </CheckboxGroup>
+                </FormItem>
+                <FormItem>
+                    <Button type="primary" @click.prevent="login" v-on:keyup.enter="login">登 录</Button>
+                </FormItem>
+            </Form>
+        </Content>
     </div>
 </template>
 
@@ -55,27 +35,37 @@
         name: "Login",
         data: function () {
             return {
-                user: '',
-                pas: '',
-                rememb: false,
+                us: {
+                    user: '',
+                    pas: '',
+                    rememb: [],
+                },
+                usrule: {
+                    user: [
+                        {required: true, message: '请输入用户名!', trigger: 'blur'},
+                        {type: 'string', min: 4, message: '用户名最少4位!', trigger: 'blur'},
+                        {type: 'string', max: 10, message: '用户名最多10位!', trigger: 'blur'}
+                    ],
+                    pas: [
+                        {required: true, message: '请输入密码!', trigger: 'blur'},
+                        {type: 'string', min: 6, message: '密码最少6位!', trigger: 'blur'},
+                        {type: 'string', max: 10, message: '密码最多10位!', trigger: 'blur'}
+                    ]
+                }
             }
-        },
-        verify: {
-            user: ["required", {minLength: 6, message: "用户名必需≥6位！"}, {maxLength: 20, message: "用户名必需≤20位！"}],
-            pas: ["required", {minLength: 6, message: "密码必需≥5位！"}, {maxLength: 15, message: "密码必需≤15位！"}]
         },
         mounted: function () {
             let ut = this.comjs.getcookie('vu');
             if (!!ut) {
                 let u = JSON.parse(ut);
-                this.user = u.u;
-                this.pas = u.p;
-                this.rememb = u.r;
+                this.us.user = u.u;
+                this.us.pas = u.p;
+                this.us.rememb = u.r;
             }
         },
         methods: {
             login: function () {
-                if (this.$verify.check()) {
+                /*if (this.$verify.check()) {
                     if (this.rememb) {
                         let u = {u: this.user, p: this.pas, r: this.rememb};
                         this.comjs.setcookie("vu", JSON.stringify(u), "d3");
@@ -83,23 +73,22 @@
                         this.comjs.delcookie('vu');
                     }
                     this.$router.push({name: "urlmain"});  //跳转到指定组件
-                }
+                }*/
+                this.$refs["us"].validate((valid) => {
+                    if (valid) {
+                        let u = {u: this.us.user, p: this.us.pas, r: this.us.rememb};
+                        this.comjs.setcookie("vu", JSON.stringify(u), "d3");
+                        this.$router.push({name: "urlmain"});  //跳转到指定组件
+                    } else {
+                        this.$Message.error('用户名或密码错误！');
+                        this.comjs.delcookie('vu');
+                    }
+                })
             }
         }
     }
 </script>
 
 <style scoped>
-    body > .grid {
-        height: 100%;
-    }
-
-    .image {
-        margin-top: -100px;
-    }
-
-    .column {
-        max-width: 450px;
-    }
 
 </style>

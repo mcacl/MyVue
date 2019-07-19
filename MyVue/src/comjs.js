@@ -1,13 +1,8 @@
 var comjs = {
-    tdata: [
-        {a: 1, b: 2, c: 3, d: 4},
-        {a: 11, b: 12, c: 13, d: 14},
-        {a: 21, b: 22, c: 23, d: 24},
-        {a: 31, b: 32, c: 33, d: 34},
-        {a: 41, b: 42, c: 43, d: 44},
-        {a: 51, b: 52, c: 53, d: 54}
-    ],
-    //设置cookie
+    /**
+     * 设置cookie
+     *time 3s:秒 3m:3分 3h:3时 3d:3天
+     */
     setcookie: function (name, value, time, path) {
         time = !!time ? time : 'd3';
         let strsec = comjs.gettimems(time);
@@ -49,6 +44,29 @@ var comjs = {
             return str1 * 24 * 60 * 60 * 1000;
         } else {
             return 0;
+        }
+    },
+    //对象数组搜索对象或字段 objarr:obj数组 key:唯一标识字段 keyval:值 dgfield:递归字段 无值代表单层查找 targetfield:对象字段 为空时返回整个对象
+    findobjvaldg: function (objarr, key, keyval, dgfield, targetfield) {
+        if (objarr instanceof Array) {
+            let resobj;
+            for (let index in objarr) {
+                if (objarr[index][key] == keyval) {
+                    if (!!targetfield) {
+                        resobj = objarr[index][targetfield];
+                    } else {
+                        resobj = objarr[index];
+                    }
+                } else {
+                    if (!!dgfield && objarr[index][dgfield].length > 0) {
+                        resobj = comjs.findobjvaldg(objarr[index][dgfield], key, keyval, dgfield, targetfield);
+                    }
+                }
+                if (!!resobj) {
+                    break;
+                }
+            }
+            return resobj;
         }
     }
 }
