@@ -1,5 +1,7 @@
 package com.example.restfull.service.server;
 
+import com.example.restfull.common.ComReturn;
+import com.example.restfull.model.SysMenu;
 import org.springframework.http.ResponseEntity;
 
 /**
@@ -7,9 +9,12 @@ import org.springframework.http.ResponseEntity;
  * 创建人:pmc
  * 描述:
  */
-public interface Servmenu
+public interface Servmenu extends Servcommon<SysMenu>
 {
-    ResponseEntity<?> menuAdd();
+    Object comResponseEntity = null;
 
-    ResponseEntity<?> menuGet();
+    default ResponseEntity<?> returnResponseOK()
+    {
+        return ComReturn.responseReturnOK(comResponseEntity);
+    }
 }

@@ -1,16 +1,16 @@
 package com.example.restfull;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
-@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
+//@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
+@MapperScan(value = "com.example.restfull.dao")
 @SpringBootApplication
-public class RestfullApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(RestfullApplication.class, args);
-	}
-
+public class RestfullApplication
+{
+    public static void main(String[] args)
+    {
+        SpringApplication.run(RestfullApplication.class, args);
+    }
 }

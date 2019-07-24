@@ -1,10 +1,10 @@
 <template>
-    <h1>测试1</h1>
+    <h1>系统菜单</h1>
 </template>
 
 <script>
     export default {
-        name: "test1"
+        name: "SysMenu"
     }
 </script>
 

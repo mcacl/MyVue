@@ -18,7 +18,7 @@
 </template>
 
 <script>
-    import Test1 from "../page/Test1";
+    import SysMenu from "../page/SysMenu";
     import Test2 from "../page/Test2";
     import WelcomePage from "../page/WelcomePage";
 
@@ -26,7 +26,7 @@
         components: {
             WelcomePage,
             Test2,
-            Test1
+            SysMenu
         },
         name: "right",
         props: {

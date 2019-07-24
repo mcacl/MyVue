@@ -17,12 +17,12 @@
             <MenuItem name="2-1">Option 1</MenuItem>
             <MenuItem name="2-2">Option 2</MenuItem>
         </Submenu>-->
-        <Submenu :name="parent.menuid" v-for="parent in menu">
+        <Submenu :name="parent.menuid" v-if="!parent.pid" v-for="parent in menu">
             <template slot="title">
                 <Icon :type="parent.icon"></Icon>
                 {{parent.name}}
             </template>
-            <MenuItem :name="child.menuid" v-for="child in parent.childs"
+            <MenuItem :name="child.menuid" v-if="child.pid==parent.menuid" v-for="child in menu"
                       @on-select="setcomponentpath('')">
                 {{child .name}}
             </MenuItem>
@@ -47,10 +47,9 @@
         methods: {
             setcomponentpath: function (menuid) {
                 if (!!menuid) {
-                    let menu = this.comjs.findobjvaldg(this.menu, 'menuid', menuid, 'childs', '');
-                    if (!!menu) {
-                        this.component = menu.component;
-                        this.$emit("componentpath", this.component, menu.name);
+                    let tmenu = this.comjs.findobjvaldg(this.menu, 'menuid', menuid, '', '');
+                    if (!!tmenu) {
+                        this.$emit("componentpath", tmenu.component, tmenu.name);
                     }
                 }
             },
@@ -64,7 +63,6 @@
                     this.alerterr(error);
                 });
             }
-
         }
     }
 </script>

@@ -1,9 +1,10 @@
 package com.example.restfull.controller.menu;
 
+import com.example.restfull.model.SysMenu;
 import com.example.restfull.service.implserver.Implservmenu;
-import com.example.restfull.service.server.Servmenu;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,22 +15,39 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping(value = "/menu")
-public class Ctrlmenu implements Servmenu
+public class Ctrlmenu
 {
     @Autowired
     private Implservmenu implservmenu;
 
-    @Override
+
     @RequestMapping(value = "/menuadd")
-    public ResponseEntity<?> menuAdd()
+    public ResponseEntity<?> add(SysMenu sysMenu)
     {
-        return implservmenu.menuAdd();
+        implservmenu.add(sysMenu);
+        return implservmenu.returnResponseOK();
     }
 
-    @Override
-    @RequestMapping(value = "/menuget")
-    public ResponseEntity<?> menuGet()
+
+    @RequestMapping(value = "/menuupdateall")
+    public ResponseEntity<?> updateAll(SysMenu sysMenu)
     {
-        return implservmenu.menuGet();
+        implservmenu.updateAll(sysMenu);
+        return implservmenu.returnResponseOK();
+    }
+
+
+    @RequestMapping(value = "/menuupdatenonull")
+    public ResponseEntity<?> updateNoNull(SysMenu sysMenu)
+    {
+        implservmenu.updateNoNull(sysMenu);
+        return implservmenu.returnResponseOK();
+    }
+
+
+    @RequestMapping(value = "/menuget")
+    public ResponseEntity<?> menuGetKey(@RequestBody(required = false) SysMenu sysMenu)
+    {
+        return implservmenu.menuGetTest(sysMenu);
     }
 }
