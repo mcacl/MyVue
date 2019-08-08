@@ -19,8 +19,10 @@ public class SysMenu
     private Date time;
 
     private Integer userid;
+    private Integer enable;
+    private String data;
 
-    public SysMenu(Integer menuid, String name, String component, String icon, Integer pid, Integer sort, Date time, Integer userid)
+    public SysMenu(Integer menuid, String name, String component, String icon, Integer pid, Integer sort, Date time, Integer userid, Integer enable, String data)
     {
         this.menuid = menuid;
         this.name = name;
@@ -30,6 +32,8 @@ public class SysMenu
         this.sort = sort;
         this.time = time;
         this.userid = userid;
+        this.enable = enable;
+        this.data = data;
     }
 
     public SysMenu()
@@ -115,5 +119,25 @@ public class SysMenu
     public void setUserid(Integer userid)
     {
         this.userid = userid;
+    }
+
+    public Integer getEnable()
+    {
+        return enable;
+    }
+
+    public void setEnable(Integer enable)
+    {
+        this.enable = enable;
+    }
+
+    public String getData()
+    {
+        return data;
+    }
+
+    public void setData(String data)
+    {
+        this.data = data;
     }
 }

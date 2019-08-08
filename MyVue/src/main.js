@@ -20,8 +20,8 @@ Vue.mixin({
     },
     data: function () {
         return {
-            comtheme: "primary",//light 白 dark 黑 primary 蓝
-            comcolor: "white", //不能用主题的公共背景颜色
+            comtheme: "light",//light 白 dark 黑 primary 蓝
+            comcolor: 'white',//"white", //不能用主题的公共背景颜色 黑#515a6e
             combacksite: "/api"//数据请求地址
         }
     },

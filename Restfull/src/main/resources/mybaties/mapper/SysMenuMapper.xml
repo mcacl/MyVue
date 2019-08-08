@@ -11,10 +11,12 @@
             <arg column="sort" javaType="java.lang.Integer" jdbcType="INTEGER" />
             <arg column="time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
             <arg column="userid" javaType="java.lang.Integer" jdbcType="INTEGER" />
+            <arg column="enable" javaType="java.lang.Integer" jdbcType="INTEGER" />
+            <arg column="data" javaType="java.lang.String" jdbcType="VARCHAR" />
         </constructor>
     </resultMap>
     <sql id="Base_Column_List">
-    menuid, name, component, icon, pid, sort, time, userid
+    menuid, name, component, icon, pid, sort, time, userid,enable,data
   </sql>
     <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
         select
@@ -29,10 +31,10 @@
     <insert id="insert" parameterType="com.example.restfull.model.SysMenu">
     insert into sysmenu (menuid, name, component, 
       icon, pid, sort, time, 
-      userid)
+      userid,enable,DATA )
     values (#{menuid,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{component,jdbcType=VARCHAR}, 
       #{icon,jdbcType=VARCHAR}, #{pid,jdbcType=INTEGER}, #{sort,jdbcType=INTEGER}, #{time,jdbcType=TIMESTAMP}, 
-      #{userid,jdbcType=INTEGER})
+      #{userid,jdbcType=INTEGER},#{enable},${data} )
   </insert>
     <insert id="insertSelective" parameterType="com.example.restfull.model.SysMenu">
         insert into sysmenu
@@ -61,6 +63,12 @@
             <if test="userid != null">
                 userid,
             </if>
+            <if test="enable != null">
+                enable,
+            </if>
+            <if test="data != null">
+                data
+            </if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="menuid != null">
@@ -86,6 +94,12 @@
             </if>
             <if test="userid != null">
                 #{userid,jdbcType=INTEGER},
+            </if>
+            <if test="enable != null">
+                #{enable,jdbcType=INTEGER},
+            </if>
+            <if test="data != null">
+                #{data,jdbcType=VARCHAR},
             </if>
         </trim>
     </insert>
@@ -113,6 +127,12 @@
             <if test="userid != null">
                 userid = #{userid,jdbcType=INTEGER},
             </if>
+            <if test="enable != null">
+                enable = #{enable,jdbcType=INTEGER},
+            </if>
+            <if test="data != null">
+                DATA = #{data} ,
+            </if>
         </set>
         where menuid = #{menuid,jdbcType=INTEGER}
     </update>
@@ -124,13 +144,16 @@
       pid = #{pid,jdbcType=INTEGER},
       sort = #{sort,jdbcType=INTEGER},
       time = #{time,jdbcType=TIMESTAMP},
-      userid = #{userid,jdbcType=INTEGER}
+      userid = #{userid,jdbcType=INTEGER},
+      enable = #{enable,jdbcType=INTEGER},
+      DATA =${data}
     where menuid = #{menuid,jdbcType=INTEGER}
   </update>
     <select id="selectList" parameterType="com.example.restfull.model.SysMenu" resultMap="BaseResultMap">
         SELECT * FROM `sysmenu` t where 1=1
-        <if test="name != null"> AND NAME=#{name,jdbcType=VARCHAR}</if>
-        <if test="userid != null"> AND userid=#{userid}</if>
+        <if test="name != null">AND NAME=#{name,jdbcType=VARCHAR}</if>
+        <if test="userid != null">AND userid=#{userid}</if>
+        <if test="enable !=null">AND enable=#{enable}</if>
         ORDER BY t.pid,t.sort
     </select>
 </mapper>

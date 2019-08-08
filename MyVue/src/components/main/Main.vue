@@ -13,24 +13,6 @@
             <bottom></bottom>
         </Footer>
     </div>
-    <!-- <div>
-         <div class="ui vertical segment">
-             <Title></Title>
-         </div>
-         <div class="ui vertical segment">
-             <div class="ui grid">
-                 <div class="menu" style="overflow: auto">
-                     <Menu @componentpath="changecomponent"></Menu>
-                 </div>
-                 <div>
-                     <component :is="showcomponent"></component>
-                 </div>
-             </div>
-         </div>
-         <div class="ui vertical segment">
-             <div class="ui grid">foot</div>
-         </div>
-     </div>-->
 </template>
 
 <script>

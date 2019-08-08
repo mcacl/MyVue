@@ -18,7 +18,7 @@
 </template>
 
 <script>
-    import SysMenu from "../page/SysMenu";
+    import SysMenu from "../page/menu/SysMenu";
     import Test2 from "../page/Test2";
     import WelcomePage from "../page/WelcomePage";
 

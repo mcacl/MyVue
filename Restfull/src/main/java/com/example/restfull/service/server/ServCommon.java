@@ -1,6 +1,8 @@
 package com.example.restfull.service.server;
 
 
+import org.springframework.http.ResponseEntity;
+
 import java.util.List;
 
 /**
@@ -8,7 +10,7 @@ import java.util.List;
  * 创建人:pmc
  * 描述:
  */
-public interface Servcommon<T>
+public interface ServCommon<T>
 {
     int add(T t);
 
@@ -23,4 +25,6 @@ public interface Servcommon<T>
     T selectKey(String key);
 
     List<T> selectList(T t);
+
+    ResponseEntity<?> returnResponseOK();
 }
