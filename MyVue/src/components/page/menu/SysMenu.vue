@@ -14,8 +14,8 @@
                 </Submenu>
             </Menu>
         </Sider>
-        <Content>
-            <MenuForm></MenuForm>
+        <Content style="margin-right: 15px;" v-show="!!menucheck">
+            <MenuForm :modeldata="menucheck"></MenuForm>
         </Content>
     </Layout>
 </template>
@@ -31,6 +31,7 @@
             return {
                 componentname: "",
                 menu: [],
+                menucheck: null
             }
         },
         computed: {},
@@ -38,23 +39,21 @@
             this.getmenu();
         },
         methods: {
+            getmenu: function () {
+                this.axiospost('menu/menuget', {enable: 1}, this.getmenuback);
+            },
+            getmenuback: function (response) {
+                if (!!response.data) {
+                    this.menu = response.data;
+                }
+            },
             selectmenu: function (menuid) {
                 if (!!menuid) {
                     let tmenu = this.comjs.findobjvaldg(this.menu, 'menuid', menuid, '', '');
                     if (!!tmenu) {
-                        console.log(tmenu);
+                        this.menucheck = tmenu;
                     }
                 }
-            },
-            getmenu: function () {
-                this.axios.post(this.combacksite + "menu/menuget").then(response => {
-                    var data = response.data;
-                    if (!!data) {
-                        this.menu = data;
-                    }
-                }).catch(error => {
-                    this.alerterr(error);
-                });
             }
         }
     }

@@ -1,5 +1,5 @@
 <template>
-    <Menu active-name="" :theme="comtheme" width="auto"  accordion @on-select="setcomponentpath"><!--open-names=""-->
+    <Menu active-name="" :theme="comtheme" width="auto" accordion @on-select="setcomponentpath"><!--open-names=""-->
         <Submenu :name="parent.menuid" v-if="!parent.pid" v-for="parent in menu">
             <template slot="title">
                 <Icon :type="parent.icon"></Icon>
@@ -36,15 +36,13 @@
                 }
             },
             getmenu: function () {
-                this.axios.post(this.combacksite + "menu/menuget", {'enable': 1}).then(response => {
-                    var data = response.data;
-                    if (!!data) {
-                        this.menu = data;
-                    }
-                }).catch(error => {
-                    this.alerterr(error);
-                });
-            }
+                this.axiospost('menu/menuget', {enable: 1}, this.getmenuback);
+            },
+            getmenuback: function (response) {
+                if (!!response.data) {
+                    this.menu = response.data;
+                }
+            },
         }
     }
 </script>
