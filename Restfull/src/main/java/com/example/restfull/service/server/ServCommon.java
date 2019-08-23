@@ -18,7 +18,7 @@ public interface ServCommon<T>
 
     int updateNoNull(T t);
 
-    int delete(T t);
+    int delete(Integer id);
 
     T selectKey(T t);
 

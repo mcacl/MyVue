@@ -19,13 +19,13 @@
 
 <script>
     import SysMenu from "../page/menu/SysMenu";
-    import Test2 from "../page/Test2";
+    import SysUser from "../page/menu/SysUser";
     import WelcomePage from "../page/WelcomePage";
 
     export default {
         components: {
             WelcomePage,
-            Test2,
+            SysUser,
             SysMenu
         },
         name: "right",

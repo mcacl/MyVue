@@ -1,33 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.restfull.dao.SysUserMapper">
-  <resultMap id="BaseResultMap" type="com.example.restfull.model.SysUser">
-    <constructor>
-      <idArg column="userid" javaType="java.lang.Integer" jdbcType="INTEGER" />
-      <arg column="name" javaType="java.lang.String" jdbcType="VARCHAR" />
-      <arg column="sex" javaType="java.lang.Integer" jdbcType="INTEGER" />
-      <arg column="email" javaType="java.lang.String" jdbcType="VARCHAR" />
-      <arg column="latelogintime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
-      <arg column="loginname" javaType="java.lang.String" jdbcType="VARCHAR" />
-      <arg column="phone" javaType="java.lang.String" jdbcType="VARCHAR" />
-      <arg column="islogin" javaType="java.lang.Integer" jdbcType="INTEGER" />
-      <arg column="pas" javaType="java.lang.String" jdbcType="VARCHAR" />
-    </constructor>
-  </resultMap>
-  <sql id="Base_Column_List">
+    <resultMap id="BaseResultMap" type="com.example.restfull.model.SysUser">
+        <constructor>
+            <idArg column="userid" javaType="java.lang.Integer" jdbcType="INTEGER" />
+            <arg column="name" javaType="java.lang.String" jdbcType="VARCHAR" />
+            <arg column="sex" javaType="java.lang.Integer" jdbcType="INTEGER" />
+            <arg column="email" javaType="java.lang.String" jdbcType="VARCHAR" />
+            <arg column="latelogintime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+            <arg column="loginname" javaType="java.lang.String" jdbcType="VARCHAR" />
+            <arg column="phone" javaType="java.lang.String" jdbcType="VARCHAR" />
+            <arg column="islogin" javaType="java.lang.Integer" jdbcType="INTEGER" />
+            <arg column="pas" javaType="java.lang.String" jdbcType="VARCHAR" />
+        </constructor>
+    </resultMap>
+    <sql id="Base_Column_List">
     userid, name, sex, email, latelogintime, loginname, phone, islogin, pas
   </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
-    <include refid="Base_Column_List" />
-    from sysuser
-    where userid = #{userid,jdbcType=INTEGER}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from sysuser
+        where userid = #{userid,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from sysuser
     where userid = #{userid,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.example.restfull.model.SysUser">
+    <!--用in时 参数只有list 或array时 collection必须是固定的list或array,如果还有其它参数或者参数是自定义对象,只要是list或array类型 collection必须用对应的变量名-->
+    <delete id="deleteInKey" parameterType="java.util.Arrays">
+        DELETE FROM sysuser WHERE userid IN
+        <foreach collection="array" open="(" close=")" separator="," item="item">
+            #{item,jdbcType=INTEGER}
+        </foreach>
+    </delete>
+    <insert id="insert" parameterType="com.example.restfull.model.SysUser">
     insert into sysuser (userid, name, sex, 
        email, latelogintime,
       loginname, phone, islogin, 
@@ -37,98 +44,98 @@
       #{loginname,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{islogin,jdbcType=INTEGER}, 
       #{pas,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.example.restfull.model.SysUser">
-    insert into sysuser
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="userid != null">
-        userid,
-      </if>
-      <if test="name != null">
-        name,
-      </if>
-      <if test="sex != null">
-        sex,
-      </if>
-      <if test="email != null">
-        email,
-      </if>
-      <if test="latelogintime != null">
-        latelogintime,
-      </if>
-      <if test="loginname != null">
-        loginname,
-      </if>
-      <if test="phone != null">
-        phone,
-      </if>
-      <if test="islogin != null">
-        islogin,
-      </if>
-      <if test="pas != null">
-        pas,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="userid != null">
-        #{userid,jdbcType=INTEGER},
-      </if>
-      <if test="name != null">
-        #{name,jdbcType=VARCHAR},
-      </if>
-      <if test="sex != null">
-        #{sex,jdbcType=INTEGER},
-      </if>
-      <if test="email != null">
-        #{email,jdbcType=VARCHAR},
-      </if>
-      <if test="latelogintime != null">
-        #{latelogintime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="loginname != null">
-        #{loginname,jdbcType=VARCHAR},
-      </if>
-      <if test="phone != null">
-        #{phone,jdbcType=VARCHAR},
-      </if>
-      <if test="islogin != null">
-        #{islogin,jdbcType=INTEGER},
-      </if>
-      <if test="pas != null">
-        #{pas,jdbcType=VARCHAR},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.example.restfull.model.SysUser">
-    update sysuser
-    <set>
-      <if test="name != null">
-        name = #{name,jdbcType=VARCHAR},
-      </if>
-      <if test="sex != null">
-        sex = #{sex,jdbcType=INTEGER},
-      </if>
-      <if test="email != null">
-        email = #{email,jdbcType=VARCHAR},
-      </if>
-      <if test="latelogintime != null">
-        latelogintime = #{latelogintime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="loginname != null">
-        loginname = #{loginname,jdbcType=VARCHAR},
-      </if>
-      <if test="phone != null">
-        phone = #{phone,jdbcType=VARCHAR},
-      </if>
-      <if test="islogin != null">
-        islogin = #{islogin,jdbcType=INTEGER},
-      </if>
-      <if test="pas != null">
-        pas = #{pas,jdbcType=VARCHAR},
-      </if>
-    </set>
-    where userid = #{userid,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.example.restfull.model.SysUser">
+    <insert id="insertSelective" parameterType="com.example.restfull.model.SysUser">
+        insert into sysuser
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="userid != null">
+                userid,
+            </if>
+            <if test="name != null">
+                name,
+            </if>
+            <if test="sex != null">
+                sex,
+            </if>
+            <if test="email != null">
+                email,
+            </if>
+            <if test="latelogintime != null">
+                latelogintime,
+            </if>
+            <if test="loginname != null">
+                loginname,
+            </if>
+            <if test="phone != null">
+                phone,
+            </if>
+            <if test="islogin != null">
+                islogin,
+            </if>
+            <if test="pas != null">
+                pas,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="userid != null">
+                #{userid,jdbcType=INTEGER},
+            </if>
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="sex != null">
+                #{sex,jdbcType=INTEGER},
+            </if>
+            <if test="email != null">
+                #{email,jdbcType=VARCHAR},
+            </if>
+            <if test="latelogintime != null">
+                #{latelogintime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="loginname != null">
+                #{loginname,jdbcType=VARCHAR},
+            </if>
+            <if test="phone != null">
+                #{phone,jdbcType=VARCHAR},
+            </if>
+            <if test="islogin != null">
+                #{islogin,jdbcType=INTEGER},
+            </if>
+            <if test="pas != null">
+                #{pas,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.example.restfull.model.SysUser">
+        update sysuser
+        <set>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="sex != null">
+                sex = #{sex,jdbcType=INTEGER},
+            </if>
+            <if test="email != null">
+                email = #{email,jdbcType=VARCHAR},
+            </if>
+            <if test="latelogintime != null">
+                latelogintime = #{latelogintime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="loginname != null">
+                loginname = #{loginname,jdbcType=VARCHAR},
+            </if>
+            <if test="phone != null">
+                phone = #{phone,jdbcType=VARCHAR},
+            </if>
+            <if test="islogin != null">
+                islogin = #{islogin,jdbcType=INTEGER},
+            </if>
+            <if test="pas != null">
+                pas = #{pas,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where userid = #{userid,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.example.restfull.model.SysUser">
     update sysuser
     set name = #{name,jdbcType=VARCHAR},
       sex = #{sex,jdbcType=INTEGER},
@@ -140,4 +147,10 @@
       pas = #{pas,jdbcType=VARCHAR}
     where userid = #{userid,jdbcType=INTEGER}
   </update>
+    <select id="selectList" parameterType="com.example.restfull.model.SysUser" resultMap="BaseResultMap">
+        SELECT * FROM `sysuser` t where 1=1
+        <if test="name != null">AND (NAME=#{name} OR loginname LIKE '%${name}%')</if>
+        <if test="userid != null">AND userid=#{userid}</if>
+        ORDER BY t.latelogintime desc,t.islogin desc
+    </select>
 </mapper>

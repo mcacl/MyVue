@@ -4,7 +4,6 @@ import com.example.restfull.dao.SysMenuMapper;
 import com.example.restfull.model.SysMenu;
 import com.example.restfull.service.server.ServMenu;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -45,9 +44,9 @@ public class ImplServMenu extends ServMenu
     }
 
     @Override
-    public int delete(SysMenu sysMenu)
+    public int delete(Integer id)
     {
-        int num = sysMenuMapper.deleteByPrimaryKey(sysMenu.getMenuid());
+        int num = sysMenuMapper.deleteByPrimaryKey(id);
         comResponseEntity = num;
         return num;
     }
@@ -74,14 +73,5 @@ public class ImplServMenu extends ServMenu
         List<SysMenu> list = sysMenuMapper.selectList(sysMenu);
         comResponseEntity = list;
         return list;
-    }
-
-    public ResponseEntity<?> menuGetTest(SysMenu sysMenu)
-    {
-        String objects = "[{\"name\":\"菜单1\",\"menuid\":\"1\",\"icon\":\"ios-navigate\",\"data\":{\"component\":\"\"},\"childs\":[{\"name\":\"子菜单1-1\",\"menuid\":\"1-1\",\"icon\":\"ios-keypad\",\"component\":\"Test1\",\"data\":{},\"childs\":[]}]},{\"name\":\"菜单2\",\"menuid\":\"2\",\"icon\":\"ios-navigate\",\"data\":{\"component\":\"\"},\"childs\":[{\"name\":\"子菜单2-1\",\"menuid\":\"2-1\",\"icon\":\"ios-keypad\",\"component\":\"Test2\",\"data\":{},\"childs\":[]}]}]";
-        //_responseEntity = objects;
-        //_responseEntity = selectList(sysMenu);
-        comResponseEntity = selectKey("1");
-        return super.returnResponseOK();
     }
 }

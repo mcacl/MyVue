@@ -83,6 +83,37 @@ Vue.mixin({
             }).catch(error => {
                 this.alerterr(error);
             })
+        },
+        /**
+         *弹出确认提示框
+         * @param content 内容 html
+         * @param okfun 确定回调
+         * @param cancelfun 取消回调 可空
+         * @param title 标题 默认 '提示'
+         */
+        confirmcom: function (content, okfun, cancelfun, title) {
+            title = !!title ? title : "提示";
+            this.$Modal.confirm({
+                title: title,
+                content: content,
+                onOk: () => {
+                    okfun();
+                },
+                onCancel: () => {
+                    if (!!cancelfun)
+                        cancelfun();
+                }
+            });
+        },
+        /**
+         * 获取分页参数
+         * @param pagesize 分页大小
+         * @param pagenum 当前页码
+         * @param model 查询数据的条件实体
+         * @returns {{pageSize: *, pageNum: *, model: *}}
+         */
+        page: function (pagesize, pagenum, model) {
+            return {"pageSize": pagesize, "pageNum": pagenum, "model": model};
         }
     }
 })

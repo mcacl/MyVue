@@ -15,37 +15,43 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping(value = "/menu")
-public class Ctrlmenu
+public class CtrlMenu
 {
     @Autowired
     private ImplServMenu implServMenu;
 
-    @RequestMapping(value = "/menuadd")
-    public ResponseEntity<?> add(SysMenu sysMenu)
+    @RequestMapping(value = "/add")
+    public ResponseEntity<?> add(@RequestBody SysMenu sysMenu)
     {
         implServMenu.add(sysMenu);
         return implServMenu.returnResponseOK();
     }
 
 
-    @RequestMapping(value = "/menuupdateall")
-    public ResponseEntity<?> updateAll(SysMenu sysMenu)
+    @RequestMapping(value = "/updateall")
+    public ResponseEntity<?> updateAll(@RequestBody SysMenu sysMenu)
     {
         implServMenu.updateAll(sysMenu);
         return implServMenu.returnResponseOK();
     }
 
 
-    @RequestMapping(value = "/menuupdatenonull")
-    public ResponseEntity<?> updateNoNull(SysMenu sysMenu)
+    @RequestMapping(value = "/updatenonull")
+    public ResponseEntity<?> updateNoNull(@RequestBody SysMenu sysMenu)
     {
         implServMenu.updateNoNull(sysMenu);
         return implServMenu.returnResponseOK();
     }
 
+    @RequestMapping(value = "/delete")
+    public ResponseEntity<?> delete(@RequestBody SysMenu sysMenu)
+    {
+        implServMenu.delete(sysMenu.getMenuid());
+        return implServMenu.returnResponseOK();
+    }
 
-    @RequestMapping(value = "/menuget")
-    public ResponseEntity<?> menuGetKey(@RequestBody(required = false) SysMenu sysMenu)
+    @RequestMapping(value = "/list")
+    public ResponseEntity<?> list(@RequestBody(required = false) SysMenu sysMenu)
     {
         implServMenu.selectList(sysMenu);
         return implServMenu.returnResponseOK();
