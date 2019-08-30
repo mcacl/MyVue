@@ -2,6 +2,8 @@ package com.example.restfull.dao;
 
 import com.example.restfull.model.SysAuthority;
 
+import java.util.List;
+
 public interface SysAuthorityMapper {
     int deleteByPrimaryKey(Integer id);
 
@@ -14,4 +16,6 @@ public interface SysAuthorityMapper {
     int updateByPrimaryKeySelective(SysAuthority record);
 
     int updateByPrimaryKey(SysAuthority record);
+
+    List<SysAuthority> selectList(SysAuthority sysAuthority);
 }

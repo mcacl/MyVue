@@ -35,7 +35,7 @@
       userid,enable,DATA ,username)
     values (#{menuid,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{component,jdbcType=VARCHAR}, 
       #{icon,jdbcType=VARCHAR}, #{pid,jdbcType=INTEGER}, #{sort,jdbcType=INTEGER}, #{time,jdbcType=TIMESTAMP}, 
-      #{userid,jdbcType=INTEGER},#{enable},${data} ,${username})
+      #{userid,jdbcType=INTEGER},#{enable,jdbcType=INTEGER} ,${data,jdbcType=VARCHAR}  ,${username,jdbcType=VARCHAR} )
   </insert>
     <insert id="insertSelective" parameterType="com.example.restfull.model.SysMenu">
         insert into sysmenu
@@ -68,10 +68,10 @@
                 enable,
             </if>
             <if test="data != null">
-                data
+                data,
             </if>
             <if test="username != null">
-                ,username
+                username,
             </if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
@@ -161,7 +161,7 @@
     where menuid = #{menuid,jdbcType=INTEGER}
   </update>
     <select id="selectList" parameterType="com.example.restfull.model.SysMenu" resultMap="BaseResultMap">
-        SELECT * FROM `sysmenu` t where 1=1
+        SELECT * FROM sysmenu t where 1=1
         <if test="name != null">AND NAME=#{name,jdbcType=VARCHAR}</if>
         <if test="userid != null">AND userid=#{userid}</if>
         <if test="enable !=null">AND enable=#{enable}</if>

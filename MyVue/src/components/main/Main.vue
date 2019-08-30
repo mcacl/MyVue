@@ -3,11 +3,11 @@
         <Header :style="{'background': comcolor,height:'10%'}">
             <top></top>
         </Header>
-        <Layout style="height: 86%;margin-top: 4px;">
+        <Layout style="height: 86%;" class="comcontent">
             <Sider hide-trigger :style="{background: comcolor}">
                 <left @componentpath="changecomponent"></left>
             </Sider>
-            <right :showcomponent="showcomponent" :showmenu="showmenu"></right>
+            <right :showcomponent="showcomponent" :showmenu="showmenu" style="margin-left: 4px"></right>
         </Layout>
         <Footer style="height: 3%;margin-top: 2px;padding: 0px 0px;text-align: center;">
             <bottom></bottom>
@@ -54,6 +54,5 @@
         border-radius: 4px;
         overflow: hidden;
     }
-
 
 </style>

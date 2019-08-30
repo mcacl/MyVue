@@ -149,8 +149,9 @@
   </update>
     <select id="selectList" parameterType="com.example.restfull.model.SysUser" resultMap="BaseResultMap">
         SELECT * FROM `sysuser` t where 1=1
-        <if test="name != null">AND (NAME=#{name} OR loginname LIKE '%${name}%')</if>
-        <if test="userid != null">AND userid=#{userid}</if>
+        <if test="name != null and name != ''">AND (NAME=#{name} OR loginname LIKE '%${name}%')</if>
+        <if test="userid != null and userid !=''">AND userid=#{userid}</if>
+        <if test="loginname != null and loginname != ''">AND loginname =#{loginname}</if>
         ORDER BY t.latelogintime desc,t.islogin desc
     </select>
 </mapper>

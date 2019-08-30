@@ -2,7 +2,10 @@ package com.example.restfull.dao;
 
 import com.example.restfull.model.SysUserGroup;
 
-public interface SysUserGroupMapper {
+import java.util.List;
+
+public interface SysUserGroupMapper
+{
     int deleteByPrimaryKey(Integer groupid);
 
     int insert(SysUserGroup record);
@@ -14,4 +17,6 @@ public interface SysUserGroupMapper {
     int updateByPrimaryKeySelective(SysUserGroup record);
 
     int updateByPrimaryKey(SysUserGroup record);
+
+    List<SysUserGroup> selectList(SysUserGroup sysUserGroup);
 }

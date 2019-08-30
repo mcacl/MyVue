@@ -11,7 +11,7 @@
                 </Col>
             </Row>
         </Header>
-        <Content :style="{margin: '2px 0px 0px 2px', background: comcolor, minHeight: '220px'}">
+        <Content :style="{ 'margin-top':'3px',background: comcolor, minHeight: '220px'}">
             <component :is="showcomponent"></component>
         </Content>
     </Layout>
@@ -21,12 +21,14 @@
     import SysMenu from "../page/menu/SysMenu";
     import SysUser from "../page/menu/SysUser";
     import WelcomePage from "../page/WelcomePage";
+    import SysUserGroup from "../page/menu/SysUserGroup"
 
     export default {
         components: {
             WelcomePage,
             SysUser,
-            SysMenu
+            SysMenu,
+            SysUserGroup
         },
         name: "right",
         props: {

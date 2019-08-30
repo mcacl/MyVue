@@ -2,12 +2,12 @@
     <Form ref="formmodel" :model="formmodel" :rules="ruleValidate" :label-width="100">
         <Row>
             <Col span="11">
-            <FormItem label="菜单id">
+            <FormItem label="菜单编号">
                 <Input v-model="formmodel.menuid" :disabled="checkdisable('menuid')"></Input>
             </FormItem>
             </Col>
             <Col span="11">
-            <FormItem label="父菜单id">
+            <FormItem label="父菜单编号">
                 <Input v-model="formmodel.pid" :disabled="checkdisable('pid')"></Input>
             </FormItem>
             </Col>
@@ -27,7 +27,7 @@
         <Row>
             <Col span="11">
             <FormItem label="图标" prop="">
-                <Input v-model="formmodel.icon" placeholder="菜单图标名称" :disabled="checkdisable('time')"></Input>
+                <Input v-model="formmodel.icon" placeholder="菜单图标名称" :disabled="checkdisable('icon')"></Input>
             </FormItem>
             </Col>
             <Col span="11">
@@ -39,7 +39,7 @@
         </Row>
         <Row>
             <Col span="11">
-            <FormItem label="创建人id" prop="">
+            <FormItem label="创建人编号" prop="">
                 <Input v-model="formmodel.userid" :disabled="checkdisable('userid')"></Input>
             </FormItem>
             </Col>
@@ -136,7 +136,7 @@
 
 <script>
     export default {
-        name: "MenuForm",
+        name: "FormMenu",
         props: {
             modeldata: {
                 type: Object, default() {
@@ -155,17 +155,17 @@
             return {
                 uri: 'menu',
                 formmodel: {
-                    component: "",
-                    data: "",
+                    component: null,
+                    data: null,
                     enable: 1,
-                    icon: "",
-                    menuid: "",
-                    name: "",
-                    pid: "",
+                    icon: null,
+                    menuid: null,
+                    name: null,
+                    pid: null,
                     sort: 20,
-                    time: "",
-                    userid: "",
-                    username: ""
+                    time: null,
+                    userid: null,
+                    username: null
                 },
                 ruleValidate: {
                     name: [
@@ -221,9 +221,9 @@
             savemenu: function (name) {
                 this.$refs[name].validate((valid) => {
                     if (valid) {
-                        let url = this.uri+'/updatenonull';
+                        let url = this.uri + '/updatenonull';
                         if (this.isadd) {
-                            url = this.uri+'/add';
+                            url = this.uri + '/add';
                         }
                         this.axiospost(url, this.formmodel, this.commenuback);
                     } else {
@@ -248,12 +248,13 @@
                     return;
                 }
                 this.confirmcom('<p>确定删除？</p>', function () {
-                    self.axiospost(self.uri+'/delete', self.formmodel, self.commenuback);
+                    self.axiospost(self.uri + '/delete', self.formmodel, self.commenuback);
                 })
             },
             commenuback: function (response) {
                 if (!!response && !!response.data) {
                     this.alertsuces('操作成功!');
+                    this.formmodel = {};
                 }
                 this.$emit('refresh');
             },

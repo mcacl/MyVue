@@ -8,7 +8,7 @@ public interface SysUserMapper
 {
     int deleteByPrimaryKey(Integer userid);
 
-    int deleteInKey(Integer[] idarr);
+    int deleteInKey(int[] ids);
 
     int insert(SysUser record);
 

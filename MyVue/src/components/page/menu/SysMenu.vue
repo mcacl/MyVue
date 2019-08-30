@@ -25,18 +25,18 @@
                 </Submenu>
             </Menu>
         </Sider>
-        <Content style="margin-right: 15px;" v-show="!!menucheck">
-            <MenuForm :modeldata="menucheck" :menutype="menutype" :havechild="havechild" @refresh="getmenu"
-                      :isadd="isadd"></MenuForm>
+        <Content :style="{background: comcolor, minHeight: '220px'}" v-show="!!checkmodel" class="comformtop">
+            <FormMenu :modeldata="checkmodel" :menutype="menutype" :havechild="havechild" @refresh="getmenu"
+                      :isadd="isadd"></FormMenu>
         </Content>
     </Layout>
 </template>
 
 <script>
-    import MenuForm from "./MenuForm";
+    import FormMenu from "./FormMenu";
 
     export default {
-        components: {MenuForm},
+        components: {FormMenu},
         name: "SysMenu",
         props: {},
         data: function () {
@@ -44,7 +44,7 @@
                 uri: 'menu',
                 componentname: "",
                 menu: [],
-                menucheck: null,
+                checkmodel: null,
                 menutype: null, //选择菜单类型 C 子 P 父
                 havechild: true, //是否有子菜单 控制能否删除
                 isadd: false //新增菜单?
@@ -70,7 +70,7 @@
                     if (!!tmenu) {
                         this.havechild = false;//重置父菜单是否有子菜单
                         this.menutype = !menutype ? "C" : menutype;
-                        this.menucheck = tmenu;
+                        this.checkmodel = tmenu;
                         if (menutype == "P") {
                             this.havechild = this.checkchild(tmenu.menuid);
                         }
@@ -82,19 +82,19 @@
             },
             addmenu: function () {
                 this.isadd = true;
-                if (!!this.menucheck) {
-                    this.menucheck = {
-                        component: "",
-                        data: "",
+                if (!!this.checkmodel) {
+                    this.checkmodel = {
+                        component: null,
+                        data: null,
                         enable: 1,
-                        icon: "",
-                        menuid: "",
-                        name: "",
-                        pid: this.menucheck.pid,
+                        icon: null,
+                        menuid: null,
+                        name: null,
+                        pid: this.checkmodel.pid,
                         sort: 20,
-                        time: "",
-                        userid: this.menucheck.userid,
-                        username: this.menucheck.username
+                        time: null,
+                        userid: this.checkmodel.userid,
+                        username: this.checkmodel.username
                     };
                 } else {
                     this.alertwarn("请选中添加按钮的类型!选中父菜单则增加父菜单,选中子菜单则增加同级子菜单");

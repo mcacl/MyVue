@@ -1,4 +1,5 @@
 import Comjs from "./comjs";
+import "./comcss.css";
 import Vue from 'vue';
 import router from './router.js';
 import App from './App.vue';
@@ -78,7 +79,7 @@ Vue.mixin({
          */
         axiosget: function (url, data, callback, head) {
             head = !!head ? head : {headers: {'Content-Type': 'application/json;charset=utf-8'}};
-            this.axios.get(this.combacksite + url, {params: {data}}, head).then(response => {
+            this.axios.get(this.combacksite + url, {params: data}, head).then(response => {
                 callback(response);
             }).catch(error => {
                 this.alerterr(error);

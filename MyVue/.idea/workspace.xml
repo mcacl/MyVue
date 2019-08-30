@@ -6,31 +6,43 @@
     </artifacts-to-build>
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/menu/CtrlMenu.java" line="58" />
+    <bookmark url="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/menu/CtrlMenu.java" line="17" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2090b54-39e9-4c5d-ac5a-8d0bdd8f5d12" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/page/menu/UserForm.vue" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/common/IComController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/common/IDaoExtend.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/user/CtrlUser.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/model/extend/PageModel.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplServUser.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/ServUser.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/ServUserGroup.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/tool/ToolObject.java" />
+    <list default="true" id="c2090b54-39e9-4c5d-ac5a-8d0bdd8f5d12" name="Default" comment="增加用户管理和分页">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/comcss.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/page/menu/FormUserGroup.vue" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/page/menu/SysUserGroup.vue" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/common/ImplIComAbstract.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/user/CtrlUserAuthority.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/user/CtrlUserGroup.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplUserAuthority.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/IServCommon.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/components/main/Left.vue" afterPath="$PROJECT_DIR$/src/components/main/Left.vue" />
+      <change beforePath="$PROJECT_DIR$/src/components/main/Main.vue" afterPath="$PROJECT_DIR$/src/components/main/Main.vue" />
       <change beforePath="$PROJECT_DIR$/src/components/main/Right.vue" afterPath="$PROJECT_DIR$/src/components/main/Right.vue" />
-      <change beforePath="$PROJECT_DIR$/src/components/page/Test2.vue" afterPath="$PROJECT_DIR$/src/components/page/menu/SysUser.vue" />
-      <change beforePath="$PROJECT_DIR$/src/components/page/menu/MenuForm.vue" afterPath="$PROJECT_DIR$/src/components/page/menu/MenuForm.vue" />
+      <change beforePath="$PROJECT_DIR$/src/components/page/menu/MenuForm.vue" afterPath="$PROJECT_DIR$/src/components/page/menu/FormMenu.vue" />
       <change beforePath="$PROJECT_DIR$/src/components/page/menu/SysMenu.vue" afterPath="$PROJECT_DIR$/src/components/page/menu/SysMenu.vue" />
+      <change beforePath="$PROJECT_DIR$/src/components/page/menu/SysUser.vue" afterPath="$PROJECT_DIR$/src/components/page/menu/SysUser.vue" />
+      <change beforePath="$PROJECT_DIR$/src/components/page/menu/UserForm.vue" afterPath="$PROJECT_DIR$/src/components/page/menu/FormUser.vue" />
       <change beforePath="$PROJECT_DIR$/src/main.js" afterPath="$PROJECT_DIR$/src/main.js" />
-      <change beforePath="$PROJECT_DIR$/../Restfull/pom.xml" afterPath="$PROJECT_DIR$/../Restfull/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/menu/Ctrlmenu.java" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/menu/CtrlMenu.java" />
+      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/common/IComController.java" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/common/IComController.java" />
+      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/common/IDaoExtend.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/menu/CtrlMenu.java" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/menu/CtrlMenu.java" />
+      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/user/CtrlUser.java" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/user/CtrlUser.java" />
+      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/dao/SysAuthorityMapper.java" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/dao/SysAuthorityMapper.java" />
+      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/dao/SysUserGroupMapper.java" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/dao/SysUserGroupMapper.java" />
       <change beforePath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/dao/SysUserMapper.java" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/dao/SysUserMapper.java" />
-      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplServMenu.java" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplServMenu.java" />
-      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/ServCommon.java" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/ServCommon.java" />
+      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplServMenu.java" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplMenu.java" />
+      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplServUser.java" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplUser.java" />
+      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/ServComAbstract.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/ServCommon.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/ServMenu.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/ServUser.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/ServUserGroup.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/resources/mybaties/mapper/SysAuthorityMapper.xml" afterPath="$PROJECT_DIR$/../Restfull/src/main/resources/mybaties/mapper/SysAuthorityMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/resources/mybaties/mapper/SysMenuMapper.xml" afterPath="$PROJECT_DIR$/../Restfull/src/main/resources/mybaties/mapper/SysMenuMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/resources/mybaties/mapper/SysUserGroupMapper.xml" afterPath="$PROJECT_DIR$/../Restfull/src/main/resources/mybaties/mapper/SysUserGroupMapper.xml" />
       <change beforePath="$PROJECT_DIR$/../Restfull/src/main/resources/mybaties/mapper/SysUserMapper.xml" afterPath="$PROJECT_DIR$/../Restfull/src/main/resources/mybaties/mapper/SysUserMapper.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/../Restfull/target/" />
@@ -58,60 +70,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SysUser.vue" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/page/menu/SysUser.vue">
+      <file leaf-file-name="CtrlMenu.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/menu/CtrlMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="65" column="17" lean-forward="true" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
-              <folding>
-                <element signature="n#style#0;n#Layout#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#Sider#0;n#Layout#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#Page#0;n#Sider#0;n#Layout#0;n#template#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Left.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/main/Left.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="41" column="17" lean-forward="false" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
-              <folding>
-                <element signature="n#style#0;n#Layout#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#Layout#0;n#template#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CtrlUser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/user/CtrlUser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="101" column="43" lean-forward="false" selection-start-line="101" selection-start-column="43" selection-end-line="101" selection-end-column="43" />
+            <state relative-caret-position="136">
+              <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main.js">
+      <file leaf-file-name="CtrlUserAuthority.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/user/CtrlUserAuthority.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="117" column="5" lean-forward="false" selection-start-line="117" selection-start-column="5" selection-end-line="117" selection-end-column="5" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IDaoExtend.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/common/IDaoExtend.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="17" column="28" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="28" />
+            <state relative-caret-position="255">
+              <caret line="15" column="78" lean-forward="false" selection-start-line="15" selection-start-column="78" selection-end-line="15" selection-end-column="78" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -119,14 +92,75 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImplServUser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplServUser.java">
+      <file leaf-file-name="ImplUserAuthority.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplUserAuthority.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="88" column="29" lean-forward="false" selection-start-line="88" selection-start-column="29" selection-end-line="88" selection-end-column="29" />
+            <state relative-caret-position="166">
+              <caret line="83" column="5" lean-forward="true" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SysAuthorityMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/dao/SysAuthorityMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SysAuthorityMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Restfull/src/main/resources/mybaties/mapper/SysAuthorityMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="89" column="13" lean-forward="true" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
+              <folding>
+                <marker date="1567131226865" expanded="true" signature="721:756" ph="select id, u... plugin" />
+                <marker date="1567131226865" expanded="true" signature="868:987" ph="select id, u... sysauthority" />
+                <marker date="1567131226865" expanded="true" signature="1077:1139" ph="delete from sysauthority... " />
+                <marker date="1567131226865" expanded="true" signature="1237:1426" ph="insert into sysauthority... " />
+                <marker date="1567131226865" expanded="true" signature="2555:2978" ph="update sysauthority... " />
+                <marker date="1567131226865" expanded="true" signature="3090:3279" ph="update sysauthority... " />
+                <marker date="1567131226865" expanded="true" signature="3411:3672" ph="SELECT * FRO... sysauthority" />
+                <marker date="1567131226865" expanded="true" signature="3411:3674" ph="SELECT * FRO... sysauthority" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImplUserGroup.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplUserGroup.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="121" column="19" lean-forward="true" selection-start-line="121" selection-start-column="19" selection-end-line="121" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImplUser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplUser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1043">
+              <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImplIComAbstract.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/common/ImplIComAbstract.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="26" column="26" lean-forward="true" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -139,16 +173,13 @@
         <option value="HTML File" />
         <option value="Interface" />
         <option value="Vue Single File Component" />
+        <option value="CSS File" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>webpack</find>
-      <find>componentpath</find>
-      <find>isCollapsed</find>
-      <find>menuitemClasses</find>
       <find>WelcomePage</find>
       <find>axios</find>
       <find>openNames</find>
@@ -156,22 +187,42 @@
       <find>setUsername</find>
       <find>12</find>
       <find>havechild</find>
-      <find>formmodel</find>
       <find>t</find>
       <find>SysMenu</find>
-      <find>sysMenu</find>
-      <find>delete</find>
       <find>changecomponent</find>
       <find>save</find>
       <find>refresh</find>
       <find>uri</find>
+      <find>menucheck</find>
+      <find>loading</find>
+      <find>modeldata</find>
+      <find>delete</find>
+      <find>ischeck</find>
+      <find>latelogintime</find>
+      <find>initcheck</find>
+      <find>implServUser</find>
+      <find>sysUser</find>
+      <find>SysUser</find>
+      <find>sysMenu</find>
+      <find>menuid</find>
+      <find>formmodel</find>
+      <find>getuser</find>
+      <find>getuserback</find>
+      <find>saveform</find>
+      <find>sysUserGroup</find>
     </findStrings>
     <replaceStrings>
       <replace>Col</replace>
       <replace>formmodel</replace>
       <replace>11</replace>
       <replace>t 实体</replace>
+      <replace>SysUserGroup</replace>
+      <replace>t</replace>
+      <replace>fMapper</replace>
+      <replace>T</replace>
       <replace>sysUser</replace>
+      <replace>sysUserGroup</replace>
+      <replace>sysAuthority</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -191,57 +242,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/main/Title.vue" />
-        <option value="$PROJECT_DIR$/src/components/main/Bottom.vue" />
-        <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/src/components/page/Test1.vue" />
-        <option value="$PROJECT_DIR$/src/components/page/Test2.vue" />
-        <option value="$PROJECT_DIR$/src/components/main/Top.vue" />
-        <option value="$PROJECT_DIR$/src/comjs.js" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/components/login/Login.vue" />
-        <option value="$PROJECT_DIR$/vue.config.js" />
-        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/common/ComReturn.java" />
-        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/Servmenu.java" />
-        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/servmenu/Servmenu.java" />
-        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/dao/SysMenuMapper.java" />
-        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/model/SysUser.java" />
-        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/model/SysUserGroup.java" />
-        <option value="$PROJECT_DIR$/../Restfull/src/main/resources/mybaties/generateConfig.xml" />
-        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/RestfullApplication.java" />
-        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/Servcommon.java" />
-        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/Implservmenu.java" />
-        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/Servmenu.java" />
-        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/ServComAbstract.java" />
         <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ServMenu.java" />
         <option value="$PROJECT_DIR$/../Restfull/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/src/components/main/Main.vue" />
         <option value="$PROJECT_DIR$/src/components/page/SysMenu.vue" />
         <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/model/SysMenu.java" />
-        <option value="$PROJECT_DIR$/../Restfull/src/main/resources/mybaties/mapper/SysMenuMapper.xml" />
         <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/menu/Ctrlmenu.java" />
-        <option value="$PROJECT_DIR$/src/components/main/Right.vue" />
         <option value="$PROJECT_DIR$/../Restfull/pom.xml" />
         <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/ServUserGroup.java" />
-        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/ServCommon.java" />
-        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplServMenu.java" />
-        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/menu/CtrlMenu.java" />
         <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/common/IPage.java" />
-        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/common/IComController.java" />
-        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/dao/SysUserMapper.java" />
-        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/ServUser.java" />
-        <option value="$PROJECT_DIR$/../Restfull/src/main/resources/mybaties/mapper/SysUserMapper.xml" />
         <option value="$PROJECT_DIR$/src/components/page/menu/UserForm.vue" />
         <option value="$PROJECT_DIR$/src/components/page/menu/MenuForm.vue" />
         <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/tool/ToolObject.java" />
-        <option value="$PROJECT_DIR$/src/components/page/menu/SysMenu.vue" />
         <option value="$PROJECT_DIR$/src/components/main/Left.vue" />
-        <option value="$PROJECT_DIR$/src/main.js" />
-        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/common/IDaoExtend.java" />
-        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/user/CtrlUser.java" />
         <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/model/extend/PageModel.java" />
+        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/ServUser.java" />
+        <option value="$PROJECT_DIR$/src/components/main/Main.vue" />
+        <option value="$PROJECT_DIR$/src/main.js" />
+        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/user/UserGroup.java" />
         <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplServUser.java" />
+        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/dao/SysUserGroupMapper.java" />
+        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplServUserGroup.java" />
+        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/common/IDaoExtend.java" />
+        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/ServComAbstract.java" />
+        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/ServCommon.java" />
+        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/ImplServComAbstract.java" />
+        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplServMenu.java" />
+        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplMenu.java" />
+        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplUser.java" />
+        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/dao/SysUserMapper.java" />
+        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/IServCommon.java" />
+        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/menu/CtrlMenu.java" />
+        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/user/CtrlUser.java" />
+        <option value="$PROJECT_DIR$/src/components/main/Right.vue" />
+        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/user/CtrlUserGroup.java" />
+        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/common/ImplIComAbstract.java" />
+        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/common/IComController.java" />
+        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/ImplIServComAbstract.java" />
+        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplUserGroup.java" />
+        <option value="$PROJECT_DIR$/src/comcss.css" />
+        <option value="$PROJECT_DIR$/../Restfull/src/main/resources/mybaties/mapper/SysUserGroupMapper.xml" />
+        <option value="$PROJECT_DIR$/../Restfull/src/main/resources/mybaties/mapper/SysUserMapper.xml" />
+        <option value="$PROJECT_DIR$/src/components/page/menu/FormMenu.vue" />
+        <option value="$PROJECT_DIR$/src/components/page/menu/FormUser.vue" />
+        <option value="$PROJECT_DIR$/src/components/page/menu/FormUserGroup.vue" />
+        <option value="$PROJECT_DIR$/src/components/page/menu/SysMenu.vue" />
         <option value="$PROJECT_DIR$/src/components/page/menu/SysUser.vue" />
+        <option value="$PROJECT_DIR$/src/components/page/menu/SysUserGroup.vue" />
+        <option value="$PROJECT_DIR$/../Restfull/src/main/resources/mybaties/mapper/SysMenuMapper.xml" />
+        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplUserAuthority.java" />
+        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/dao/SysAuthorityMapper.java" />
+        <option value="$PROJECT_DIR$/../Restfull/src/main/resources/mybaties/mapper/SysAuthorityMapper.xml" />
+        <option value="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/user/CtrlUserAuthority.java" />
       </list>
     </option>
   </component>
@@ -364,6 +415,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -374,6 +428,11 @@
             <path>
               <item name="MyVue" type="b2602c69:ProjectViewProjectNode" />
               <item name="MyVue" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyVue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyVue" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -381,13 +440,6 @@
               <item name="MyVue" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyVue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyVue" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MyVue" type="b2602c69:ProjectViewProjectNode" />
@@ -526,7 +578,7 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="example" type="462c0819:PsiDirectoryNode" />
               <item name="restfull" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MyVue" type="b2602c69:ProjectViewProjectNode" />
@@ -538,7 +590,6 @@
               <item name="example" type="462c0819:PsiDirectoryNode" />
               <item name="restfull" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="extend" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MyVue" type="b2602c69:ProjectViewProjectNode" />
@@ -612,41 +663,7 @@
             </path>
             <path>
               <item name="MyVue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Restfull" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyVue" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="MyVue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="MyVue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyVue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyVue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lang" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MyVue" type="b2602c69:ProjectViewProjectNode" />
@@ -692,6 +709,51 @@
               <item name="github" type="462c0819:PsiDirectoryNode" />
               <item name="pagehelper" type="462c0819:PsiDirectoryNode" />
               <item name="page" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyVue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.mybatis:mybatis:3.5.1" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="MyVue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.mybatis:mybatis:3.5.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="mybatis-3.5.1.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyVue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.mybatis:mybatis:3.5.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="mybatis-3.5.1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyVue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.mybatis:mybatis:3.5.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="mybatis-3.5.1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="apache" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyVue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.mybatis:mybatis:3.5.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="mybatis-3.5.1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="apache" type="462c0819:PsiDirectoryNode" />
+              <item name="ibatis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyVue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.mybatis:mybatis:3.5.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="mybatis-3.5.1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="apache" type="462c0819:PsiDirectoryNode" />
+              <item name="ibatis" type="462c0819:PsiDirectoryNode" />
+              <item name="binding" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MyVue" type="b2602c69:ProjectViewProjectNode" />
@@ -753,10 +815,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -780,14 +839,16 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\java\Project\MyVue\Restfull\src\main\resources\mybaties" />
-      <recent name="F:\java\Project\MyVue\MyVue\src\assets\extendui" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\java\Project\MyVue\MyVue\src\components\page\menu" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\java\Project\MyVue\MyVue\src\components\page\menu" />
+      <recent name="F:\java\Project\MyVue\Restfull\src\main\resources\mybaties" />
+      <recent name="F:\java\Project\MyVue\MyVue\src\assets\extendui" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1002,7 +1063,9 @@
       <workItem from="1565163563277" duration="20677000" />
       <workItem from="1565253372707" duration="1790000" />
       <workItem from="1565314380721" duration="44880000" />
-      <workItem from="1566195786513" duration="73148000" />
+      <workItem from="1566195786513" duration="73265000" />
+      <workItem from="1566798310799" duration="56926000" />
+      <workItem from="1567069002756" duration="8884000" />
     </task>
     <task id="LOCAL-00001" summary="动态组件使用">
       <created>1562925319852</created>
@@ -1039,11 +1102,18 @@
       <option name="project" value="LOCAL" />
       <updated>1565345775664</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="增加用户管理和分页">
+      <created>1566552721873</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1566552721873</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="298666000" />
+    <option name="totallyTimeSpent" value="364593000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1059,7 +1129,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27916667" sideWeight="0.5526882" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27916667" sideWeight="0.57275987" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19318181" sideWeight="0.49175626" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1416122" sideWeight="0.5758294" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1068,9 +1138,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23010753" sideWeight="0.49944994" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27916667" sideWeight="0.44731182" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33835617" sideWeight="0.387471" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27916667" sideWeight="0.42724013" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.49749103" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3375" sideWeight="0.38494623" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -1080,11 +1150,11 @@
       <window_info id="Mybatis datasource" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1405018" sideWeight="0.4241706" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.6666667" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22580644" sideWeight="0.4741036" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23297492" sideWeight="0.4741036" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2746426" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14767025" sideWeight="0.52589643" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891247" sideWeight="0.49722221" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32777777" sideWeight="0.49462366" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19112115" sideWeight="0.509165" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1095,7 +1165,7 @@
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" x="110" y="100" width="1238" height="660" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" x="110" y="100" width="1238" height="660" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1140,28 +1210,15 @@
     <MESSAGE value="增加mysql 访问" />
     <MESSAGE value="增加mybites 菜单控制" />
     <MESSAGE value="菜单form" />
-    <option name="LAST_COMMIT_MESSAGE" value="菜单form" />
+    <MESSAGE value="增加用户管理和分页" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加用户管理和分页" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/user/CtrlUser.java</url>
-          <line>113</line>
-          <properties />
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplServUser.java</url>
-          <line>75</line>
-          <properties />
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="30" />
+      <option name="time" value="40" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1180,169 +1237,17 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://E:/maven/Repository/org/mybatis/mybatis/3.5.1/mybatis-3.5.1.jar!/org/apache/ibatis/binding/MapperProxy.class">
+    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/model/extend/PageModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        <state relative-caret-position="-17">
+          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@types/q/index.d.ts">
+    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/model/SysUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="146" column="8" lean-forward="false" selection-start-line="146" selection-start-column="8" selection-end-line="146" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/html5/web-forms2.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="604" column="16" lean-forward="false" selection-start-line="604" selection-start-column="16" selection-end-line="604" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/main/Top.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/model/SysMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="51" column="5" lean-forward="false" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/babel.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/vue/types/options.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="64" column="28" lean-forward="false" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/html5/web-forms.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="359" column="16" lean-forward="false" selection-start-line="359" selection-start-column="16" selection-end-line="359" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/CtrlServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="21" column="35" lean-forward="false" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="15027" column="12" lean-forward="false" selection-start-line="15027" selection-start-column="12" selection-end-line="15027" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/comjs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="49" column="4" lean-forward="false" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/mW4KLFq1cA&amp;clickid=0&amp;cpx=__OFFSET_X__&amp;cpy=__OFFSET_Y__&amp;cs=__EVENT_TIME_START__&amp;ce=__EVENT_TIME_END__&amp;csign2=eobLEZCgX1-=&amp;url=http%3A%2F%2Fwww.honkings.com%2Fhonking%2Fself%2Fnew360%2Fwap-2%2Findex.html%3Flan.url">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="40" lean-forward="true" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Restfull/mvnw">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="116" column="4" lean-forward="false" selection-start-line="116" selection-start-column="4" selection-end-line="116" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/model/SysAuthority.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/ServUserGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/dao/SysMenuMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/resources/mybaties/mapper/SysMenuMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="168" column="13" lean-forward="true" selection-start-line="162" selection-start-column="3" selection-end-line="168" selection-end-column="13" />
-          <folding>
-            <marker date="1565336341271" expanded="true" signature="1289:1372" ph="select menui... " />
-            <marker date="1565336341271" expanded="true" signature="1484:1606" ph="select menui... " />
-            <marker date="1565336341271" expanded="true" signature="1696:1761" ph="delete from sysmenu... " />
-            <marker date="1565336341271" expanded="true" signature="1854:2241" ph="insert into sysmenu... " />
-            <marker date="1565336341271" expanded="true" signature="4610:5749" ph="update sysmenu... " />
-            <marker date="1565336341271" expanded="true" signature="5856:6296" ph="update sysmenu... " />
-            <marker date="1565336341271" expanded="true" signature="6423:6437" ph="SELECT * FRO... sysmenu" />
-            <marker date="1565336341271" expanded="true" signature="6423:6458" ph="SELECT * FRO... sysmenu" />
-            <marker date="1565336341271" expanded="true" signature="6423:6524" ph="SELECT * FRO... sysmenu" />
-            <marker date="1565336341271" expanded="true" signature="6423:6584" ph="SELECT * FRO... sysmenu" />
-            <marker date="1565336341271" expanded="true" signature="6423:6678" ph="SELECT * FRO... sysmenu" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplServMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        <state relative-caret-position="238">
+          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -1355,285 +1260,396 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/Integer.java">
+    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/config/Config.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="51" column="19" lean-forward="false" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
+        <state relative-caret-position="119">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/ServCommon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="22" column="21" lean-forward="false" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/ServMenu.java">
+    <entry file="file://$PROJECT_DIR$/src/router.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
+          <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/common/IComController.java">
+    <entry file="file://$PROJECT_DIR$/src/comjs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="49" column="62" lean-forward="false" selection-start-line="49" selection-start-column="62" selection-end-line="49" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/artifacts/Restfull/WEB-INF/classes/mybaties/mapper/SysUserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="149" column="12" lean-forward="false" selection-start-line="149" selection-start-column="12" selection-end-line="149" selection-end-column="12" />
-          <folding>
-            <marker date="1566521720065" expanded="true" signature="1130:1209" ph="select useri... plugin" />
-            <marker date="1566521720065" expanded="true" signature="1321:1443" ph="select useri... sysuser" />
-            <marker date="1566521720065" expanded="true" signature="1533:1598" ph="delete from sysuser... " />
-            <marker date="1566521720065" expanded="true" signature="2065:2466" ph="insert into sysuser... " />
-            <marker date="1566521720065" expanded="true" signature="4508:5486" ph="update sysuser... " />
-            <marker date="1566521720065" expanded="true" signature="5593:6002" ph="update sysuser... " />
-            <marker date="1566521720065" expanded="true" signature="6129:6363" ph="SELECT * FRO... sysuser" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/resources/mybaties/mapper/SysUserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="155" column="9" lean-forward="false" selection-start-line="155" selection-start-column="9" selection-end-line="155" selection-end-column="9" />
-          <folding>
-            <marker date="1566376964271" expanded="true" signature="1130:1206" ph="select useri... " />
-            <marker date="1566376964271" expanded="true" signature="1130:1209" ph="select useri... plugin" />
-            <marker date="1566376964271" expanded="true" signature="1321:1443" ph="select useri... sysuser" />
-            <marker date="1566376964271" expanded="true" signature="1533:1598" ph="delete from sysuser... " />
-            <marker date="1566376964271" expanded="true" signature="1797:1816" ph="DELETE FROM sysuser... " />
-            <marker date="1566376964271" expanded="true" signature="1797:1832" ph="DELETE FROM sysuser... " />
-            <marker date="1566376964271" expanded="true" signature="2065:2466" ph="insert into sysuser... " />
-            <marker date="1566376964271" expanded="true" signature="4508:5486" ph="update sysuser... " />
-            <marker date="1566376964271" expanded="true" signature="5593:6002" ph="update sysuser... " />
-            <marker date="1566376964271" expanded="true" signature="6129:6363" ph="SELECT * FRO... sysuser" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/dao/SysUserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/menu/CtrlMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="26" column="28" lean-forward="false" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Restfull/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="64" column="21" lean-forward="true" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/maven/Repository/com/github/pagehelper/pagehelper/5.1.10/pagehelper-5.1.10.jar!/com/github/pagehelper/page/PageMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/maven/Repository/com/github/pagehelper/pagehelper/5.1.10/pagehelper-5.1.10.jar!/com/github/pagehelper/Page.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/maven/Repository/com/github/pagehelper/pagehelper/5.1.10/pagehelper-5.1.10.jar!/com/github/pagehelper/PageSerializable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/maven/Repository/com/github/pagehelper/pagehelper/5.1.10/pagehelper-5.1.10.jar!/com/github/pagehelper/PageInfo.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="51">
+          <caret line="3" column="33" lean-forward="true" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/main/Main.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="23" lean-forward="true" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
-          <folding>
-            <element signature="n#style#0;n#Layout#0;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#Footer#0;n#div#0;n#template#0;n#!!top" expanded="false" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/page/menu/UserForm.vue">
+    <entry file="file://$PROJECT_DIR$/src/components/page/WelcomePage.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1724">
-          <caret line="127" column="18" lean-forward="true" selection-start-line="127" selection-start-column="18" selection-end-line="127" selection-end-column="18" />
-          <folding>
-            <element signature="n#style#0;n#DatePicker#0;n#FormItem#1;n#Row#2;n#Form#0;n#template#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/maven/Repository/org/springframework/spring-web/5.1.8.RELEASE/spring-web-5.1.8.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="107" column="66" lean-forward="true" selection-start-line="107" selection-start-column="66" selection-end-line="107" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/tool/ToolObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/main/Left.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="41" column="17" lean-forward="false" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#Layout#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#Layout#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/page/menu/SysMenu.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="43" column="19" lean-forward="false" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/page/menu/MenuForm.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1671">
-          <caret line="247" column="27" lean-forward="true" selection-start-line="247" selection-start-column="27" selection-end-line="247" selection-end-column="27" />
-          <folding>
-            <element signature="n#Form#0;n#template#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="62" column="33" lean-forward="false" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/ServComAbstract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-          <folding />
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="117" column="5" lean-forward="false" selection-start-line="117" selection-start-column="5" selection-end-line="117" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/common/IDaoExtend.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="17" column="28" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/model/extend/PageModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        <state relative-caret-position="275">
+          <caret line="86" column="10" lean-forward="false" selection-start-line="86" selection-start-column="10" selection-end-line="86" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/ServUser.java">
+    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/model/SysAuthority.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        <state relative-caret-position="51">
+          <caret line="3" column="23" lean-forward="true" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplServUser.java">
+    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplImplServUser.java" />
+    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplImplServMenu.java" />
+    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/ImplServMenu.java" />
+    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/ImplServUser.java" />
+    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/ImplServUserGroup.java" />
+    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/common/IDaoExtend.java" />
+    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/IServCommon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="88" column="29" lean-forward="false" selection-start-line="88" selection-start-column="29" selection-end-line="88" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/user/CtrlUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="101" column="43" lean-forward="false" selection-start-line="101" selection-start-column="43" selection-end-line="101" selection-end-column="43" />
+        <state relative-caret-position="136">
+          <caret line="78" column="12" lean-forward="false" selection-start-line="78" selection-start-column="12" selection-end-line="78" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/main/Right.vue">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="38" column="21" lean-forward="false" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+          <folding>
+            <element signature="e#657#700#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/user/CtrlUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/user/CtrlUserGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <caret line="14" column="37" lean-forward="true" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/common/IComController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="70" column="11" lean-forward="true" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/dao/SysUserGroupMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/dao/SysUserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/ImplIServComAbstract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="15" column="3" lean-forward="false" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/RestfullApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/comcss.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/resources/mybaties/mapper/SysUserGroupMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="100" column="13" lean-forward="false" selection-start-line="100" selection-start-column="13" selection-end-line="100" selection-end-column="13" />
+          <folding>
+            <marker date="1567072223080" expanded="true" signature="813:866" ph="select group... plugin" />
+            <marker date="1567072223080" expanded="true" signature="978:1107" ph="select group... sysusergroup" />
+            <marker date="1567072223080" expanded="true" signature="1197:1269" ph="delete from sysusergroup... " />
+            <marker date="1567072223080" expanded="true" signature="1367:1614" ph="insert into sysusergroup... " />
+            <marker date="1567072223080" expanded="true" signature="2967:3527" ph="update sysusergroup... " />
+            <marker date="1567072223080" expanded="true" signature="3639:3893" ph="update sysusergroup... " />
+            <marker date="1567072223080" expanded="true" signature="4025:4362" ph="SELECT * FRO... sysusergroup" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/page/menu/FormMenu.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="271" column="17" lean-forward="false" selection-start-line="271" selection-start-column="17" selection-end-line="271" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/page/menu/FormUser.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="106" column="31" lean-forward="true" selection-start-line="106" selection-start-column="31" selection-end-line="106" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/page/menu/FormUserGroup.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="75" column="37" lean-forward="true" selection-start-line="75" selection-start-column="37" selection-end-line="75" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/page/menu/SysMenu.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="91" column="35" lean-forward="true" selection-start-line="91" selection-start-column="35" selection-end-line="91" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/page/menu/SysUser.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="65" column="17" lean-forward="true" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
+        <state relative-caret-position="204">
+          <caret line="102" column="36" lean-forward="true" selection-start-line="102" selection-start-column="36" selection-end-line="102" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/page/menu/SysUserGroup.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="101" column="13" lean-forward="true" selection-start-line="101" selection-start-column="13" selection-end-line="101" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/dao/SysMenuMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/maven/Repository/org/springframework/spring-webmvc/5.1.8.RELEASE/spring-webmvc-5.1.8.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="515" column="0" lean-forward="false" selection-start-line="515" selection-start-column="0" selection-end-line="515" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/maven/Repository/org/springframework/spring-webmvc/5.1.8.RELEASE/spring-webmvc-5.1.8.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="521" column="152" lean-forward="false" selection-start-line="521" selection-start-column="152" selection-end-line="521" selection-end-column="152" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/maven/Repository/org/mybatis/mybatis/3.5.1/mybatis-3.5.1.jar!/org/apache/ibatis/binding/MapperProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="46" column="29" lean-forward="false" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
           <folding>
-            <element signature="n#style#0;n#Layout#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#Sider#0;n#Layout#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#Page#0;n#Sider#0;n#Layout#0;n#template#0;n#!!top" expanded="true" />
+            <marker date="1562741855532" expanded="true" signature="0:104" ph="/.../" />
+            <marker date="1562741855532" expanded="false" signature="149:485" ph="..." />
+            <marker date="1562741855532" expanded="true" signature="886:1019" ph="{...}" />
+            <marker date="1562741855532" expanded="true" signature="1107:1622" ph="{...}" />
+            <marker date="1562741855532" expanded="true" signature="1683:1884" ph="{...}" />
+            <marker date="1562741855532" expanded="true" signature="1762:1876" ph="{...}" />
+            <marker date="1562741855532" expanded="true" signature="1986:2411" ph="{...}" />
+            <marker date="1562741855532" expanded="true" signature="2464:2567" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/Restfull/WEB-INF/classes/mybaties/mapper/SysMenuMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="75" lean-forward="true" selection-start-line="31" selection-start-column="75" selection-end-line="31" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/model/SysMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/maven/Repository/org/springframework/spring-web/5.1.8.RELEASE/spring-web-5.1.8.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/common/ImplIComAbstract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="26" column="26" lean-forward="true" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/menu/CtrlMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1043">
+          <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplUserGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="121" column="19" lean-forward="true" selection-start-line="121" selection-start-column="19" selection-end-line="121" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/resources/mybaties/mapper/SysMenuMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="168" column="13" lean-forward="true" selection-start-line="162" selection-start-column="4" selection-end-line="168" selection-end-column="13" />
+          <folding>
+            <marker date="1567129718759" expanded="true" signature="1289:1372" ph="select menui... " />
+            <marker date="1567129718759" expanded="true" signature="1484:1606" ph="select menui... " />
+            <marker date="1567129718759" expanded="true" signature="1696:1761" ph="delete from sysmenu... " />
+            <marker date="1567129718759" expanded="true" signature="1854:2295" ph="insert into sysmenu... " />
+            <marker date="1567129718759" expanded="true" signature="4665:5804" ph="update sysmenu... " />
+            <marker date="1567129718759" expanded="true" signature="5911:6351" ph="update sysmenu... " />
+            <marker date="1567129718759" expanded="true" signature="6478:6492" ph="SELECT * FRO... sysmenu" />
+            <marker date="1567129718759" expanded="true" signature="6478:6511" ph="SELECT * FRO... sysmenu" />
+            <marker date="1567129718759" expanded="true" signature="6478:6577" ph="SELECT * FRO... sysmenu" />
+            <marker date="1567129718759" expanded="true" signature="6478:6637" ph="SELECT * FRO... sysmenu" />
+            <marker date="1567129718759" expanded="true" signature="6478:6731" ph="SELECT * FRO... sysmenu" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/resources/mybaties/mapper/SysUserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="142" column="58" lean-forward="false" selection-start-line="142" selection-start-column="58" selection-end-line="142" selection-end-column="58" />
+          <folding>
+            <marker date="1567072302693" expanded="true" signature="1130:1206" ph="select useri... " />
+            <marker date="1567072302693" expanded="true" signature="1130:1209" ph="select useri... plugin" />
+            <marker date="1567072302693" expanded="true" signature="1321:1443" ph="select useri... sysuser" />
+            <marker date="1567072302693" expanded="true" signature="1533:1598" ph="delete from sysuser... " />
+            <marker date="1567072302693" expanded="true" signature="1797:1816" ph="DELETE FROM sysuser... " />
+            <marker date="1567072302693" expanded="true" signature="1797:1832" ph="DELETE FROM sysuser... " />
+            <marker date="1567072302693" expanded="true" signature="2065:2466" ph="insert into sysuser... " />
+            <marker date="1567072302693" expanded="true" signature="4508:5486" ph="update sysuser... " />
+            <marker date="1567072302693" expanded="true" signature="5593:6002" ph="update sysuser... " />
+            <marker date="1567072302693" expanded="true" signature="6129:6484" ph="SELECT * FRO... sysuser" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/resources/mybaties/mapper/SysAuthorityMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="89" column="13" lean-forward="true" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
+          <folding>
+            <marker date="1567131226865" expanded="true" signature="721:756" ph="select id, u... plugin" />
+            <marker date="1567131226865" expanded="true" signature="868:987" ph="select id, u... sysauthority" />
+            <marker date="1567131226865" expanded="true" signature="1077:1139" ph="delete from sysauthority... " />
+            <marker date="1567131226865" expanded="true" signature="1237:1426" ph="insert into sysauthority... " />
+            <marker date="1567131226865" expanded="true" signature="2555:2978" ph="update sysauthority... " />
+            <marker date="1567131226865" expanded="true" signature="3090:3279" ph="update sysauthority... " />
+            <marker date="1567131226865" expanded="true" signature="3411:3672" ph="SELECT * FRO... sysauthority" />
+            <marker date="1567131226865" expanded="true" signature="3411:3674" ph="SELECT * FRO... sysauthority" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/dao/SysAuthorityMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/user/CtrlUserAuthority.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="78" lean-forward="false" selection-start-line="15" selection-start-column="78" selection-end-line="15" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplUserAuthority.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="83" column="5" lean-forward="true" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
