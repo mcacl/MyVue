@@ -9,41 +9,8 @@
     <bookmark url="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/menu/CtrlMenu.java" line="17" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2090b54-39e9-4c5d-ac5a-8d0bdd8f5d12" name="Default" comment="增加用户管理和分页">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/comcss.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/page/menu/FormUserGroup.vue" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/page/menu/SysUserGroup.vue" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/common/ImplIComAbstract.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/user/CtrlUserAuthority.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/user/CtrlUserGroup.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplUserAuthority.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/IServCommon.java" />
+    <list default="true" id="c2090b54-39e9-4c5d-ac5a-8d0bdd8f5d12" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/components/main/Main.vue" afterPath="$PROJECT_DIR$/src/components/main/Main.vue" />
-      <change beforePath="$PROJECT_DIR$/src/components/main/Right.vue" afterPath="$PROJECT_DIR$/src/components/main/Right.vue" />
-      <change beforePath="$PROJECT_DIR$/src/components/page/menu/MenuForm.vue" afterPath="$PROJECT_DIR$/src/components/page/menu/FormMenu.vue" />
-      <change beforePath="$PROJECT_DIR$/src/components/page/menu/SysMenu.vue" afterPath="$PROJECT_DIR$/src/components/page/menu/SysMenu.vue" />
-      <change beforePath="$PROJECT_DIR$/src/components/page/menu/SysUser.vue" afterPath="$PROJECT_DIR$/src/components/page/menu/SysUser.vue" />
-      <change beforePath="$PROJECT_DIR$/src/components/page/menu/UserForm.vue" afterPath="$PROJECT_DIR$/src/components/page/menu/FormUser.vue" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" afterPath="$PROJECT_DIR$/src/main.js" />
-      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/common/IComController.java" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/common/IComController.java" />
-      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/common/IDaoExtend.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/menu/CtrlMenu.java" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/menu/CtrlMenu.java" />
-      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/user/CtrlUser.java" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/user/CtrlUser.java" />
-      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/dao/SysAuthorityMapper.java" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/dao/SysAuthorityMapper.java" />
-      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/dao/SysUserGroupMapper.java" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/dao/SysUserGroupMapper.java" />
-      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/dao/SysUserMapper.java" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/dao/SysUserMapper.java" />
-      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplServMenu.java" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplMenu.java" />
-      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplServUser.java" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplUser.java" />
-      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/ServComAbstract.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/ServCommon.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/ServMenu.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/ServUser.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/server/ServUserGroup.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/resources/mybaties/mapper/SysAuthorityMapper.xml" afterPath="$PROJECT_DIR$/../Restfull/src/main/resources/mybaties/mapper/SysAuthorityMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/resources/mybaties/mapper/SysMenuMapper.xml" afterPath="$PROJECT_DIR$/../Restfull/src/main/resources/mybaties/mapper/SysMenuMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/resources/mybaties/mapper/SysUserGroupMapper.xml" afterPath="$PROJECT_DIR$/../Restfull/src/main/resources/mybaties/mapper/SysUserGroupMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/resources/mybaties/mapper/SysUserMapper.xml" afterPath="$PROJECT_DIR$/../Restfull/src/main/resources/mybaties/mapper/SysUserMapper.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/../Restfull/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -95,8 +62,8 @@
       <file leaf-file-name="ImplUserAuthority.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplUserAuthority.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="83" column="5" lean-forward="true" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+            <state relative-caret-position="149">
+              <caret line="82" column="34" lean-forward="true" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1065,7 +1032,7 @@
       <workItem from="1565314380721" duration="44880000" />
       <workItem from="1566195786513" duration="73265000" />
       <workItem from="1566798310799" duration="56926000" />
-      <workItem from="1567069002756" duration="8884000" />
+      <workItem from="1567069002756" duration="9040000" />
     </task>
     <task id="LOCAL-00001" summary="动态组件使用">
       <created>1562925319852</created>
@@ -1109,11 +1076,18 @@
       <option name="project" value="LOCAL" />
       <updated>1566552721873</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="增加用户组 优化菜单、用户管理">
+      <created>1567131552393</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1567131552393</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="364593000" />
+    <option name="totallyTimeSpent" value="364749000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1211,7 +1185,8 @@
     <MESSAGE value="增加mybites 菜单控制" />
     <MESSAGE value="菜单form" />
     <MESSAGE value="增加用户管理和分页" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加用户管理和分页" />
+    <MESSAGE value="增加用户组 优化菜单、用户管理" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加用户组 优化菜单、用户管理" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1272,6 +1247,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#21#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1286,6 +1264,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#Layout#0;n#div#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#right#0;n#Layout#0;n#div#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="e#666#690#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1293,6 +1277,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1396,6 +1381,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1646,8 +1632,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/service/implserver/ImplUserAuthority.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="83" column="5" lean-forward="true" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+        <state relative-caret-position="149">
+          <caret line="82" column="34" lean-forward="true" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
