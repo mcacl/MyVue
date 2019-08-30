@@ -21,14 +21,16 @@
     import SysMenu from "../page/menu/SysMenu";
     import SysUser from "../page/menu/SysUser";
     import WelcomePage from "../page/WelcomePage";
-    import SysUserGroup from "../page/menu/SysUserGroup"
+    import SysUserGroup from "../page/menu/SysUserGroup";
+    import SysUserAuthority from "../page/menu/SysUserAuthority"
 
     export default {
         components: {
             WelcomePage,
             SysUser,
             SysMenu,
-            SysUserGroup
+            SysUserGroup,
+            SysUserAuthority
         },
         name: "right",
         props: {

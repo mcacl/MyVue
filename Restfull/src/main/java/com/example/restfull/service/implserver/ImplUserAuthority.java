@@ -4,6 +4,7 @@ import com.example.restfull.dao.SysAuthorityMapper;
 import com.example.restfull.model.SysAuthority;
 import com.example.restfull.service.server.ImplIServComAbstract;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -12,6 +13,7 @@ import java.util.List;
  * 创建人:pmc
  * 描述:
  */
+@Service
 public class ImplUserAuthority extends ImplIServComAbstract<SysAuthority>
 {
     @Autowired
