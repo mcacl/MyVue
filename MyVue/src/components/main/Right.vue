@@ -32,6 +32,7 @@
             SysUserGroup,
             SysUserAuthority
         },
+        uri: "loginout",
         name: "right",
         props: {
             showcomponent: String,
@@ -42,10 +43,13 @@
         },
         methods: {
             loginout: function () {
+                let self = this;
                 this.$Modal.confirm({
                     title: '提示', content: '<p>确定退出系统？</p>',
                     onOk: () => {
-                        this.tologin();
+                        self.axiospost(self.uri, {}, function (response) {
+                            this.tologin();
+                        })
                     },
                     onCancel: () => {
                     }

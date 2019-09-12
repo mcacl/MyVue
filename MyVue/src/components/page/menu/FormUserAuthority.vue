@@ -1,53 +1,41 @@
 <template>
-    <Form ref="formmodel" :model="formmodel" :rules="ruleValidate" :label-width="100">
-        <Row>
-            <Col span="11">
-            <FormItem label="权限编号">
-                <Input v-model="formmodel.id" :disabled="checkdisable('id')"></Input>
-            </FormItem>
-            </Col>
-            <Col span="7">
-            <FormItem label="分组名" prop="groupname">
-                <Input v-model="formmodel.groupname" :disabled="checkdisable('groupname')"
-                       @on-change="initcheck"></Input>
-            </FormItem>
-            </Col>
-        </Row>
-        <Row>
-            <Col span="11">
-            <FormItem label="是否启用" :disabled="checkdisable('isuse')">
-                <Select v-model="formmodel.isuse">
-                    <Option :key="1" :value="1">启用</Option>
-                    <Option :key="0" :value="0">禁用</Option>
-                </Select>
-            </FormItem>
-            </Col>
-            <Col span="11">
-            <FormItem label="创建时间" prop="">
-                <DatePicker type="datetime" v-model="formmodel.createtime" style="width: 200px;"
-                            :disabled="checkdisable('createtime')"></DatePicker>
-            </FormItem>
-            </Col>
-        </Row>
-        <Row>
-            <Col span="11">
-            <FormItem label="操作状态">
-                <span style="color: red;font-size: 12px;padding: 10px 12px 10px 0px;">{{!!isadd?"新增":"修改"}}</span>
-            </FormItem>
-            </Col>
-        </Row>
-        <Row>
-            <Col span="">
-            <FormItem>
-                <Button type="primary" @click="saveform('formmodel')">保存</Button>
-                <Button style="margin-left: 20px;" @click="deletedata" :disabled="isadd">删除</Button>
-            </FormItem>
-            </Col>
-        </Row>
-        <Button @click='click'>获取</Button>
-        </Button>
-        <Tree ref='tree' :data="data4" show-checkbox></Tree>
-    </Form>
+    <Layout style="height: 100%;" :style="{'background': comcolor}">
+        <Sider hide-trigger :style="{'background': comcolor}">
+            <Tree ref='tree' :data="treemenu" show-checkbox></Tree>
+        </Sider>
+        <Content style=" background-color: #f9fafb;">
+            <Form ref="formmodel" :model="formmodel" :label-width="80">
+                <Row>
+                    <Col span="11">
+                    <FormItem label="分组名">
+                        <Input v-model="formmodel.groupname" :disabled="checkdisable('groupname')"></Input>
+                    </FormItem>
+                    </Col>
+                    <Col span="11">
+                    <FormItem label="权限编号">
+                        <Input v-model="formmodel.authorid" :disabled="checkdisable('authorid')"></Input>
+                    </FormItem>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col span="22">
+                    <FormItem label="操作状态">
+                        <span style="color: red;font-size: 12px;padding: 10px 12px 10px 0px;">编辑权限</span>
+                        <span style="color: red;font-size: 12px;padding: 10px 12px 10px 0px;"
+                              v-show="!formmodel.authorid">该用户没有赋予任何菜单权限!</span>
+                    </FormItem>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col span="11">
+                    <FormItem>
+                        <Button type="primary" @click="saveform">保存</Button>
+                    </FormItem>
+                    </Col>
+                </Row>
+            </Form>
+        </Content>
+    </Layout>
 
 </template>
 
@@ -59,136 +47,120 @@
         },
         data: function () {
             return {
-                uri: 'usergroup',
+                uri: 'userauthor',
                 isadd: false,//新增？
                 formmodel: {
                     groupid: null,
                     groupname: null,
                     menuid: null,
                     createtime: null,
-                    isuse: 1
+                    isuse: 1,
+                    authorid: null
                 },
-                ruleValidate: {
-                    groupname: [
-                        {required: true, message: '请输入用户组名称', trigger: 'blur'},
-                        {type: "string", max: 10, message: "最大10个字符", trigger: 'blur'}
-                    ]
-                },
-                data4: [
-                    {
-                        data: 1,
-                        title: 'parent 1',
-                        expand: true,
-                        children: [
-                            {
-                                data: 11,
-                                title: 'parent 1-1',
-                                expand: true,
-                                children: [
-                                    {
-                                        data: 111,
-                                        title: 'leaf 1-1-1',
-                                        //disabled: true
-                                    },
-                                    {
-                                        data: 112,
-                                        title: 'leaf 1-1-2'
-                                    }
-                                ]
-                            },
-                            {
-                                data: 12,
-                                title: 'parent 1-2',
-                                expand: true,
-                                children: [
-                                    {
-                                        data: 121,
-                                        title: 'leaf 1-2-1',
-                                        checked: true
-                                    },
-                                    {
-                                        data: 122,
-                                        title: 'leaf 1-2-1'
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            }
+                menudata: [],
+                treemenu: [],
+                authorobj: {id: null}
+            };
         },
         watch: {
             modeldata: function (val) {
                 if (!!val) {
                     this.formmodel = val;
+                    this.getauthor();
                 }
+            },
+            authorobj: function (val) {
+                this.getmenutree();
             }
         },
+        mounted: function () {
+            this.getmenu();
+        },
         methods: {
-            saveform: function (name) {
-                this.$refs[name].validate((valid) => {
-                    if (valid && (this.ischeck && this.isadd && this.isuse < 0 || !this.isadd)) {
-                        let url = this.uri + '/updatenonull';
-                        if (this.isadd) {
-                            url = this.uri + '/add';
-                        }
-                        this.axiospost(url, this.formmodel, this.comback);
-                    } else {
-                        this.alerterr('填写格式错误或验证失败!');
+            saveform: function () {
+                let nodes = this.$refs['tree'].getCheckedAndIndeterminateNodes();
+                let ids = [];
+                for (let index in nodes) {
+                    let menuid = nodes[index].data["menuid"];
+                    if (!!menuid) {
+                        ids.push(menuid);
                     }
-                });
-            },
-            deletedata: function () {
-                let self = this;
-                if (!this.formmodel.groupid) {
-                    this.alertwarn('新增数据未保存时不能删除!');
-                    return;
                 }
-                this.confirmcom('<p>确定删除？</p>', function () {
-                    self.axiosget(self.uri + '/delete', {'id': self.formmodel.groupid}, self.comback);
-                })
+                if (!!this.formmodel.groupid) {
+                    let url = this.uri + '/updatenonull';
+                    let param = this.authorobj;
+                    if (!!this.authorobj.id) {
+                        this.isadd = false;
+                    } else {
+                        this.isadd = false;
+                    }
+                    let idstr = ids.join(",");
+                    if (!!this.authorobj && idstr == this.authorobj.menuid) {
+                        this.alertsuces('无需保存!');
+                        return;
+                    }
+                    if (this.isadd) {
+                        url = this.uri + '/add';
+                        param = {id: null, menuid: "", groupid: this.formmodel.groupid};
+                    }
+                    param.menuid = idstr;
+                    this.axiospost(url, param, this.comback);
+                } else {
+                    this.alerterr('未获取到赋予权限的分组');
+                }
             },
             comback: function (response) {
                 if (!!response && !!response.data) {
                     this.alertsuces('操作成功!');
                     this.formmodel = {};
                 }
-                this.$emit('refresh');
             },
             checkdisable: function (filed) {
-                let disable = ['groupid', 'menuid', 'createtime'];
+                let disable = ['authorid', 'groupname'];
                 if (disable.indexOf(filed) > -1) {
                     return true;
                 }
                 return false;
             },
-            checkuse: function () {
+            getmenu: function () {
                 let self = this;
-                if (!!this.formmodel.groupname && this.isuse == 0) {
-                    this.axios.post(this.combacksite + this.uri + "/list", {"groupname": this.formmodel.groupname}).then(response => {
-                            if (!!response && !!response.data) {
-                                self.ischeck = true;
-                                if (response.data.length == 0) {
-                                    self.isuse = -1;
-                                } else {
-                                    self.isuse = 1;
-                                }
+                this.axiospost('menu/list', {}, function (response) {
+                        if (!!response && !!response.data) {
+                            self.menudata = response.data;
+                        }
+                    }
+                );
+            },
+            getmenutree: function () {
+                let tmenu = this.comjs.comcopy(this.menudata);
+                let authstr = this.authorobj["menuid"];
+                if (!!authstr && authstr.length > 0) {
+                    let autharr = authstr.split(",");
+                    for (let mid in autharr) {
+                        for (let index in tmenu) {
+                            if (tmenu[index].menuid == autharr[mid]) {
+                                tmenu[index].check = true;
+                                break;
                             }
                         }
-                    ).catch(error => {
-                        self.alerterr(error);
-                    });
-                } else {
-                    this.alertwarn(this.isuse == 0 ? '请填写分组名' : '已验证!');
+                    }
                 }
+                let tree = this.treebuild(null, tmenu, "pid", null, "menuid", "name");
+                this.treemenu = tree;
             },
-            initcheck: function () {
-                this.isuse = 0;
-                this.ischeck = false;
-            },
-            click: function () {
-                let node = this.$refs['tree'].getCheckedAndIndeterminateNodes();
-                console.log(node);
+            getauthor: function () {
+                let self = this;
+                this.axiospost(this.uri + '/list', {"groupid": self.formmodel.groupid},
+                    function (response) {
+                        if (!!response && !!response.data) {
+                            if (response.data.length > 0) {
+                                self.authorobj = response.data[0];
+                                self.formmodel.authorid = self.authorobj.id;
+                            } else {
+                                self.authorobj = {id: null, menuid: "", groupid: self.formmodel.groupid}
+                            }
+                        }
+                    });
             }
         }
     }

@@ -3,7 +3,7 @@
         <Sider hide-trigger :style="{'background': comcolor}"
                style="width: 450px;height: 100%;max-width: 450px;flex: auto;">
             <Input search enter-button placeholder="输入用户或登录名" v-model="searchform.name" @on-search="search"/>
-            <div class="toolrow">
+            <div class="comtool">
                 <ButtonGroup shape="circle">
                     <Button type="primary" @click="add">新增</Button>
                 </ButtonGroup>
@@ -103,7 +103,8 @@
                     loginname: null,
                     phone: null,
                     islogin: 1,
-                    pas: null
+                    pas: null,
+                    groupid: null
                 };
             },
         }

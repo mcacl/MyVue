@@ -21,8 +21,9 @@ public class SysUser
     private Integer islogin;
 
     private String pas;
+    private Integer groupid;
 
-    public SysUser(Integer userid, String name, Integer sex, String email, Date latelogintime, String loginname, String phone, Integer islogin, String pas)
+    public SysUser(Integer userid, String name, Integer sex, String email, Date latelogintime, String loginname, String phone, Integer islogin, String pas, Integer groupid)
     {
         this.userid = userid;
         this.name = name;
@@ -33,11 +34,17 @@ public class SysUser
         this.phone = phone;
         this.islogin = islogin;
         this.pas = pas;
+        this.groupid = groupid;
     }
 
     public SysUser()
     {
         super();
+    }
+
+    public SysUser(String loginname)
+    {
+        this.loginname = loginname;
     }
 
     public Integer getUserid()
@@ -128,5 +135,15 @@ public class SysUser
     public void setPas(String pas)
     {
         this.pas = pas == null ? null : pas.trim();
+    }
+
+    public Integer getGroupid()
+    {
+        return groupid;
+    }
+
+    public void setGroupid(Integer groupid)
+    {
+        this.groupid = groupid;
     }
 }

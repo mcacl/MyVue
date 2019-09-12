@@ -1,6 +1,7 @@
 package com.example.restfull.dao;
 
 import com.example.restfull.model.SysUser;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 

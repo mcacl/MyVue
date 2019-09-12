@@ -66,7 +66,7 @@
             selectmenu: function (menuid, menutype) {
                 this.isadd = false;
                 if (!!menuid) {
-                    let tmenu = this.comjs.findobjvaldg(this.menu, 'menuid', menuid, '', '');
+                    let tmenu = this.comjs.comfindobjvaldg(this.menu, 'menuid', menuid, '', '');
                     if (!!tmenu) {
                         this.havechild = false;//重置父菜单是否有子菜单
                         this.menutype = !menutype ? "C" : menutype;
@@ -101,7 +101,7 @@
                 }
             },
             checkchild: function (pid) {
-                let tmenu = this.comjs.findobjvaldg(this.menu, 'pid', pid, '', '');//检查是否有子菜单
+                let tmenu = this.comjs.comfindobjvaldg(this.menu, 'pid', pid, '', '');//检查是否有子菜单
                 if (!!tmenu) {
                     return true;
                 } else {

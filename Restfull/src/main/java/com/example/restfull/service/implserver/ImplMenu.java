@@ -17,7 +17,7 @@ import java.util.List;
 public class ImplMenu extends ImplIServComAbstract<SysMenu>
 {
     @Autowired
-    SysMenuMapper sysMenuMapper;
+    private SysMenuMapper sysMenuMapper;
 
     /**
      * 添加t
@@ -110,7 +110,7 @@ public class ImplMenu extends ImplIServComAbstract<SysMenu>
     @Override
     public SysMenu selectKey(String key)
     {
-        SysMenu entity = sysMenuMapper.selectByPrimaryKey(Integer.getInteger(key));
+        SysMenu entity = sysMenuMapper.selectByPrimaryKey(Integer.parseInt(key));
         comResponseEntity = entity;
         return entity;
     }

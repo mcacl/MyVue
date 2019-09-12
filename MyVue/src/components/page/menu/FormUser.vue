@@ -48,10 +48,10 @@
         </Row>
         <Row>
             <Col span="11">
-            <FormItem label="是否启用" :disabled="checkdisable('islogin')">
-                <Select v-model="formmodel.islogin">
-                    <Option :key="1" :value="1">启用</Option>
-                    <Option :key="0" :value="0">禁用</Option>
+            <FormItem label="用户组" prop="groupid" :disabled="checkdisable('groupid')">
+                <Select v-model="formmodel.groupid" filterable>
+                    <Option v-for="item in usergroup" :value="item.groupid" :key="item.groupid">{{ item.groupname}}
+                    </Option>
                 </Select>
             </FormItem>
             </Col>
@@ -62,6 +62,14 @@
             </Col>
         </Row>
         <Row>
+            <Col span="11">
+            <FormItem label="是否启用" :disabled="checkdisable('islogin')">
+                <Select v-model="formmodel.islogin">
+                    <Option :key="1" :value="1">启用</Option>
+                    <Option :key="0" :value="0">禁用</Option>
+                </Select>
+            </FormItem>
+            </Col>
             <Col span="11">
             <FormItem label="操作状态">
                 <span style="color: red;font-size: 12px;padding: 10px 12px 10px 0px;">{{!!isadd?"新增":"修改"}}</span>
@@ -105,7 +113,8 @@
                     loginname: null,
                     phone: null,
                     islogin: 1,
-                    pas: null
+                    pas: null,
+                    groupid: null
                 },
                 ruleValidate: {
                     name: [
@@ -113,14 +122,18 @@
                         {type: "string", max: 15, message: "最大15个字符", trigger: 'blur'}
                     ],
                     loginname: [
-                        {required: true, message: '请输入登录名', trigger: 'blur'},
+                        {required: true, type: 'string', message: '请输入登录名', trigger: 'blur'},
                         {type: "string", max: 10, message: "最大10个字符", trigger: 'blur'}
                     ],
                     email: [
                         {type: 'email', message: '邮箱格式错误', trigger: 'blur'},
                         {type: "string", max: 30, message: "最大30个字符", trigger: 'blur'}
+                    ],
+                    groupid: [
+                        {required: true, type: 'number', message: '请选择用户组', trigger: 'change'}
                     ]
-                }
+                },
+                usergroup: []//用户所在用户组
             }
         },
         watch: {
@@ -129,6 +142,9 @@
                     this.formmodel = val;
                 }
             }
+        },
+        mounted: function () {
+            this.getgroup();
         },
         methods: {
             saveform: function (name) {
@@ -150,7 +166,7 @@
                     this.alertwarn('新增数据未保存时不能删除!');
                     return;
                 }
-                this.confirmcom('<p>确定删除？</p>', function () {
+                this.comfirmcom('<p>确定删除？</p>', function () {
                     self.axiosget(self.uri + '/delete', {'id': self.formmodel.userid}, self.comback);
                 })
             },
@@ -160,6 +176,14 @@
                     this.formmodel = {};
                 }
                 this.$emit('refresh');
+            },
+            getgroup: function () {
+                let self = this;
+                this.axiospost('usergroup/list', {isuse: '1'}, function (response) {
+                    if (!!response && !!response.data) {
+                        self.usergroup = response.data;
+                    }
+                });
             },
             checkdisable: function (filed) {
                 let disable = ['userid', 'latelogintime'];

@@ -247,7 +247,7 @@
                     this.alertwarn('新增数据未保存时不能删除!')
                     return;
                 }
-                this.confirmcom('<p>确定删除？</p>', function () {
+                this.comfirmcom('<p>确定删除？</p>', function () {
                     self.axiospost(self.uri + '/delete', self.formmodel, self.commenuback);
                 })
             },

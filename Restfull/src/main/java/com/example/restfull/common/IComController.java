@@ -59,6 +59,15 @@ public interface IComController<T>
     ResponseEntity<?> deleteIn(@RequestBody int[] ids);
 
     /**
+     * 更据主键查询实体
+     *
+     * @param t 实体
+     * @return 实体
+     */
+    @RequestMapping(value = "/key")
+    public ResponseEntity<?> selectKey(T t);
+
+    /**
      * 查询多条数据 无条件为全部数据
      *
      * @param t 实体

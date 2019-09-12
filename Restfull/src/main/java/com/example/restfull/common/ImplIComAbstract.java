@@ -81,6 +81,19 @@ public abstract class ImplIComAbstract<T, F extends ImplIServComAbstract<T>> imp
     }
 
     /**
+     * 更据主键查询实体
+     *
+     * @param t 实体
+     * @return 实体
+     */
+    @Override
+    public ResponseEntity<?> selectKey(T t)
+    {
+        fImplclass.selectKey(t);
+        return fImplclass.returnResponseOK();
+    }
+
+    /**
      * 查询多条数据 无条件为全部数据
      *
      * @param t 实体

@@ -2,12 +2,7 @@
     <Layout style="height: 100%;" :style="{'background': comcolor}">
         <Sider hide-trigger :style="{'background': comcolor}"
                style="width: 450px;height: 100%;max-width: 450px;flex: auto;">
-            <Input search enter-button placeholder="输入用户或登录名" v-model="searchform.name" @on-search="search"/>
-            <div class="toolrow">
-                <ButtonGroup shape="circle">
-                    <Button type="primary" @click="add">新增</Button>
-                </ButtonGroup>
-            </div>
+            <Input search enter-button placeholder="输入用户组名" v-model="searchform.name" @on-search="search"/>
             <div style="overflow: auto;height: 88%">
                 <Table border size="small" :loading="loading" :columns="columns" :data="griddata"
                        @on-row-dblclick="select"></Table>
@@ -16,7 +11,7 @@
                   @on-page-size-change="pagesizechange" show-sizer show-total style="text-align: right;"/>
         </Sider>
         <Content :style="{background: comcolor, minHeight: '220px'}" class="comformtop">
-            <FormUserAuthority :modeldata="checkmodel" :isadd="isadd" v-show="!!checkmodel" @refresh="getlist"></FormUserAuthority>
+            <FormUserAuthority :modeldata="checkmodel" v-show="!!checkmodel"></FormUserAuthority>
         </Content>
     </Layout>
 </template>
@@ -26,24 +21,24 @@
 
     export default {
         components: {FormUserAuthority},
-        name: "SysUser",
+        name: "SysUserAuthority",
         data: function () {
             return {
-                uri: 'user',
+                uri: 'usergroup',
                 loading: false,
                 searchform: {
-                    name: ""
+                    groupname: ""
                 },
                 columns: [
+                    //{type: 'selection', width: 60, align: 'center'},//多选框
                     {type: 'index', width: 50, align: 'center'},
-                    {title: '用户名', key: 'name', fixed: 'left', sortable: true},
-                    {title: '登录名', key: 'loginname'},
-                    {title: '最近登录', key: 'latelogintime', sortable: true},
+                    {title: '用户组名', key: 'groupname', fixed: 'left', sortable: true},
+                    {title: '权限id', key: 'menuid', ellipsis: true},//ellipsis:多余数据现势为··
                     {
-                        title: '状态', key: "islogin", width: 85, sortable: true, render: (r, params) => {
+                        title: '状态', key: "isuse", width: 85, sortable: true, render: (r, params) => {
                             const row = params.row;
-                            const color = row.islogin === 1 ? 'success' : 'default';
-                            const text = row.islogin === 1 ? '启用' : '禁用';
+                            const color = row.isuse === 1 ? 'success' : 'default';
+                            const text = row.isuse === 1 ? '启用' : '禁用';
                             return r('Tag', {
                                 props: {
                                     color: color
@@ -95,17 +90,13 @@
             add: function () {
                 this.isadd = true;
                 this.checkmodel = {
-                    userid: null,
-                    name: null,
-                    sex: 0,
-                    email: null,
-                    latelogintime: null,
-                    loginname: null,
-                    phone: null,
-                    islogin: 1,
-                    pas: null
+                    groupid: null,
+                    groupname: null,
+                    menuid: null,
+                    createtime: null,
+                    isuse: 1
                 };
-            },
+            }
         }
     }
 </script>

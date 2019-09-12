@@ -8,7 +8,7 @@
         <!--commentGenerator,旨在创建class时，对注释进行控制-->
         <commentGenerator>
             <property name="suppressDate" value="true" />
-            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+            <!-- 是否去除自动生成的注释 true：是 ： false:否 这个值设为true，那么所有的代码合并都会被禁用-->
             <property name="suppressAllComments" value="true" />
         </commentGenerator>
         <!--数据库链接URL，用户名、密码 -->
@@ -20,9 +20,12 @@
         <!--<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/isql"                         userId="root" password="123456" />-->
         <!--类型配置-->
         <javaTypeResolver>
-            <!-- 默认情况下数据库中的 decimal，bigInt 在 Java 对应是 sql 下的 BigDecimal 类 -->
-            <!-- 不是 double 和 long 类型 -->
-            <!-- 使用常用的基本类型代替 sql 包下的引用类型 -->
+            <!--如果精度>0或者长度>18，就会使用java.math.BigDecimal
+            如果精度=0并且10<=长度<=18，就会使用java.lang.Long
+            如果精度=0并且5<=长度<=9，就会使用java.lang.Integer
+            如果精度=0并且长度<5，就会使用java.lang.Short
+            如果设置为true，那么一定会使用java.math.BigDecimal-->
+            <!-- forceBigDecimals属性可以控制是否强制DECIMAL和NUMERIC类型的字段转换为Java类型的java.math.BigDecimal,默认值为false-->
             <property name="forceBigDecimals" value="false" />
         </javaTypeResolver>
         <!-- 生成模型的包名和位置-->
@@ -37,17 +40,28 @@
             <property name="trimStrings" value="true" />
             <!-- 建立modal对象是否不可改变 即生成的modal对象不会有setter方法，只有构造方法 -->
             <property name="immutable" value="false" />
+            <!--rootClass:设置所有实体类的基类。如果设置，需要使用类的全限定名称 不会覆盖和父类中完全匹配的属性-->
+            <!--<property name="rootClass" value=""/>-->
+            <!--是否对数据库查询结果进行trim操作，如果设置为true就会生成类似这样public void setUsername(String username) {this.username = username == null ? null : username.trim();}的setter方法。默认值为false-->
+            <!--<property name="trimStrings" value="true"/>-->
         </javaModelGenerator>
         <!-- 生成映射文件的包名和位置-->
         <!-- targetPackage 和 targetProject：生成的 mapper 文件的包和位置 -->
         <sqlMapGenerator targetPackage="mybaties.mapper" targetProject="src/main/resources">
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
-        <!-- 生成DAO的包名和位置-->
+        <!-- 生成mapper的包名和位置 implementationPackage：可选属性 指定实现类生成的包-->
         <javaClientGenerator type="XMLMAPPER" targetPackage="com.example.restfull.dao" targetProject="src\main\java">
+            <!--自动生成子包 如果false就会直接用targetPackage属性。默认为false。-->
             <property name="enableSubPackages" value="true" />
             <!-- 针对 oracle 数据库的一个配置，是否把 schema 作为字包名 -->
             <!--<property name="enableSubPackages" value="false" />-->
+            <!--enableSubPackages-->
+            <!--exampleMethodVisibility-->
+            <!--methodNameCalculator-->
+            <!--mapper继承的父接口-->
+            <!--rootInterface-->
+            <!--useLegacyBuilder-->
         </javaClientGenerator>
         <!--要生成的表 tableName是数据库中的表名或视图名 domainObjectName是实体类名-->
         <!--<table tableName="sysmenu" domainObjectName="SysMenu"

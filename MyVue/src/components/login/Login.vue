@@ -1,10 +1,10 @@
 <template>
     <div style="width: 300px;margin: 18% auto;text-align: center;">
         <Content style="min-height: 200px;">
-            <Form ref="us" :model="us" :rules="usrule"
+            <Form ref="us" :model="us" :rules="usrule" action="/login"
                   style="padding: 35px 20px 10px;" :style="comcolor">
-                <FormItem prop="user">
-                    <Input type="text" v-model="us.user" placeholder="用户名">
+                <FormItem prop="loginname">
+                    <Input type="text" v-model="us.loginname" placeholder="登录名">
                     <Icon type="ios-person-outline" slot="prepend"></Icon>
                     </Input>
                 </FormItem>
@@ -19,7 +19,8 @@
                     </CheckboxGroup>
                 </FormItem>
                 <FormItem>
-                    <Button type="primary" @click.prevent="login" v-on:keyup.enter="login">登 录</Button>
+                    <!--<Button type="primary" @click.prevent="login" v-on:keyup.enter="login">登 录</Button>-->
+                    <Button type="submit" @click.prevent="login" v-on:keyup.enter="login">登 录</Button>
                 </FormItem>
             </Form>
         </Content>
@@ -27,21 +28,18 @@
 </template>
 
 <script>
-    import Vue from "vue";
-    import verify from "vue-verify-plugin";
-
-    Vue.use(verify, {rules: {}, blur: true});//rules:{}//自定义验证方法 blur:Bool //失去焦点时 是否开启验证
     export default {
         name: "Login",
         data: function () {
             return {
+                uri: "login",
                 us: {
-                    user: '',
-                    pas: '',
+                    loginname: null,
+                    pas: null,
                     rememb: [],
                 },
                 usrule: {
-                    user: [
+                    loginname: [
                         {required: true, message: '请输入用户名!', trigger: 'blur'},
                         {type: 'string', min: 4, message: '用户名最少4位!', trigger: 'blur'},
                         {type: 'string', max: 10, message: '用户名最多10位!', trigger: 'blur'}
@@ -55,33 +53,29 @@
             }
         },
         mounted: function () {
-            let ut = this.comjs.getcookie('vu');
+            let ut = this.comjs.comgetcookie('vu');
             if (!!ut) {
                 let u = JSON.parse(ut);
-                this.us.user = u.u;
+                this.us.loginname = u.u;
                 this.us.pas = u.p;
                 this.us.rememb = u.r;
             }
         },
         methods: {
             login: function () {
-                /*if (this.$verify.check()) {
-                    if (this.rememb) {
-                        let u = {u: this.user, p: this.pas, r: this.rememb};
-                        this.comjs.setcookie("vu", JSON.stringify(u), "d3");
-                    } else {
-                        this.comjs.delcookie('vu');
-                    }
-                    this.$router.push({name: "urlmain"});  //跳转到指定组件
-                }*/
+                let self = this;
                 this.$refs["us"].validate((valid) => {
                     if (valid) {
-                        let u = {u: this.us.user, p: this.us.pas, r: this.us.rememb};
-                        this.comjs.setcookie("vu", JSON.stringify(u), "d3");
-                        this.$router.push({name: "urlmain"});  //跳转到指定组件
-                    } else {
-                        this.$Message.error('用户名或密码错误！');
-                        this.comjs.delcookie('vu');
+                        let u = {u: this.us.loginname, p: this.us.pas, r: this.us.rememb};
+                        self.axiospost(self.uri + "/in", self.us, function (response) {
+                            if (!!response && response.data != null) {
+                                self.comjs.comsetcookie("vu", JSON.stringify(u), "d3");
+                                self.$router.push({name: "urlmain"});  //跳转到指定组件
+                            } else {
+                                self.$Message.error('用户名或密码错误！');
+                                self.comjs.comdelcookie('vu');
+                            }
+                        });
                     }
                 })
             }

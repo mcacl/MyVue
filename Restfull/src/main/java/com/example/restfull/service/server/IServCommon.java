@@ -74,9 +74,25 @@ public interface IServCommon<T>
      * 更据实体条件查询数据
      *
      * @param t 实体
-     * @return 实体集合
+     * @return list<t>
      */
     List<T> selectList(T t);
+
+    /**
+     * 更据实体条件查询第一条数据 无数据返回null
+     *
+     * @param t 实体
+     * @return t
+     */
+    default T selectFirstOrNull(T t)
+    {
+        List<T> list = selectList(t);
+        if (list.size() > 0)
+        {
+            return list.get(0);
+        }
+        return null;
+    }
 
     /**
      * 查询分页数据
@@ -89,7 +105,7 @@ public interface IServCommon<T>
     /**
      * 获取页面交互数据
      *
-     * @return
+     * @return ResponseEntity<t>
      */
     ResponseEntity<?> returnResponseOK();
 }

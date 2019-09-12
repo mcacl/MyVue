@@ -12,17 +12,18 @@
             <arg column="phone" javaType="java.lang.String" jdbcType="VARCHAR" />
             <arg column="islogin" javaType="java.lang.Integer" jdbcType="INTEGER" />
             <arg column="pas" javaType="java.lang.String" jdbcType="VARCHAR" />
+            <arg column="groupid" javaType="java.lang.Integer" jdbcType="INTEGER" />
         </constructor>
     </resultMap>
     <sql id="Base_Column_List">
-    userid, name, sex, email, latelogintime, loginname, phone, islogin, pas
+    userid, name, sex, email, latelogintime, loginname, phone, islogin, pas,groupid
   </sql>
-    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--<select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List" />
         from sysuser
         where userid = #{userid,jdbcType=INTEGER}
-    </select>
+    </select>-->
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from sysuser
     where userid = #{userid,jdbcType=INTEGER}
@@ -38,11 +39,11 @@
     insert into sysuser (userid, name, sex, 
        email, latelogintime,
       loginname, phone, islogin, 
-      pas)
+      pas,groupid)
     values (#{userid,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{sex,jdbcType=INTEGER}, 
       #{email,jdbcType=VARCHAR}, #{latelogintime,jdbcType=TIMESTAMP},
       #{loginname,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{islogin,jdbcType=INTEGER}, 
-      #{pas,jdbcType=VARCHAR})
+      #{pas,jdbcType=VARCHAR},#{groupid})
   </insert>
     <insert id="insertSelective" parameterType="com.example.restfull.model.SysUser">
         insert into sysuser
@@ -74,6 +75,9 @@
             <if test="pas != null">
                 pas,
             </if>
+            <if test="groupid!=null and groupid!=''">
+                groupid,
+            </if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="userid != null">
@@ -102,6 +106,9 @@
             </if>
             <if test="pas != null">
                 #{pas,jdbcType=VARCHAR},
+            </if>
+            <if test="groupid!=null and groupid!=''">
+                #{groupid},
             </if>
         </trim>
     </insert>
@@ -132,6 +139,9 @@
             <if test="pas != null">
                 pas = #{pas,jdbcType=VARCHAR},
             </if>
+            <if test="groupid!=null and groupid!=''">
+                groupid=#{groupid},
+            </if>
         </set>
         where userid = #{userid,jdbcType=INTEGER}
     </update>
@@ -144,14 +154,19 @@
       loginname = #{loginname,jdbcType=VARCHAR},
       phone = #{phone,jdbcType=VARCHAR},
       islogin = #{islogin,jdbcType=INTEGER},
-      pas = #{pas,jdbcType=VARCHAR}
+      pas = #{pas,jdbcType=VARCHAR},
+      groupid=#{groupid}
     where userid = #{userid,jdbcType=INTEGER}
   </update>
     <select id="selectList" parameterType="com.example.restfull.model.SysUser" resultMap="BaseResultMap">
-        SELECT * FROM `sysuser` t where 1=1
+        SELECT <include refid="Base_Column_List"/> FROM `sysuser` t where 1=1
         <if test="name != null and name != ''">AND (NAME=#{name} OR loginname LIKE '%${name}%')</if>
         <if test="userid != null and userid !=''">AND userid=#{userid}</if>
         <if test="loginname != null and loginname != ''">AND loginname =#{loginname}</if>
+        <if test="groupid!=null and groupid!=''">AND groupid=#{groupid}</if>
         ORDER BY t.latelogintime desc,t.islogin desc
+    </select>
+    <select id="selectByPrimaryKey" parameterType="integer" resultMap="BaseResultMap">
+        SELECT <include refid="Base_Column_List"/> FROM sysuser WHERE userid=#{userid,jdbcType=INTEGER}
     </select>
 </mapper>

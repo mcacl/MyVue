@@ -17,7 +17,7 @@ import java.util.List;
 public class ImplUserAuthority extends ImplIServComAbstract<SysAuthority>
 {
     @Autowired
-    SysAuthorityMapper sysAuthorityMapper;
+   private SysAuthorityMapper sysAuthorityMapper;
 
     /**
      * 添加t
@@ -110,7 +110,7 @@ public class ImplUserAuthority extends ImplIServComAbstract<SysAuthority>
     @Override
     public SysAuthority selectKey(String key)
     {
-        SysAuthority entity = sysAuthorityMapper.selectByPrimaryKey(Integer.getInteger(key));
+        SysAuthority entity = sysAuthorityMapper.selectByPrimaryKey(Integer.parseInt(key));
         comResponseEntity = entity;
         return entity;
     }

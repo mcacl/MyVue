@@ -35,7 +35,7 @@
         methods: {
             setcomponentpath: function (menuid) {
                 if (!!menuid) {
-                    let tmenu = this.comjs.findobjvaldg(this.menu, 'menuid', menuid, '', '');
+                    let tmenu = this.comjs.comfindobjvaldg(this.menu, 'menuid', menuid, '', '');
                     if (!!tmenu) {
                         this.$emit("componentpath", tmenu.component, tmenu.name);
                     }

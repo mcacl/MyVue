@@ -17,7 +17,7 @@
         select
         <include refid="Base_Column_List" />
         from sysusergroup
-        where groupid = #{groupid,jdbcType=INTEGER}
+        where groupid = #{groupid}
     </select>
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from sysusergroup

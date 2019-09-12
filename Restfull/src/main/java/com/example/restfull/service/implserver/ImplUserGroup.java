@@ -17,7 +17,7 @@ import java.util.List;
 public class ImplUserGroup extends ImplIServComAbstract<SysUserGroup>
 {
     @Autowired
-    SysUserGroupMapper sysUserGroupMapper;
+   private SysUserGroupMapper sysUserGroupMapper;
 
     /**
      * 添加t
@@ -110,7 +110,7 @@ public class ImplUserGroup extends ImplIServComAbstract<SysUserGroup>
     @Override
     public SysUserGroup selectKey(String key)
     {
-        SysUserGroup entity = sysUserGroupMapper.selectByPrimaryKey(Integer.getInteger(key));
+        SysUserGroup entity = sysUserGroupMapper.selectByPrimaryKey(Integer.parseInt(key));
         comResponseEntity = entity;
         return entity;
     }

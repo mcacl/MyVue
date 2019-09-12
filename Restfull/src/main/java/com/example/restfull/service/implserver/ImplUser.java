@@ -17,7 +17,7 @@ import java.util.List;
 public class ImplUser extends ImplIServComAbstract<SysUser>
 {
     @Autowired
-    SysUserMapper sysUserMapper;
+    private SysUserMapper sysUserMapper;
 
     /**
      * 添加t
@@ -112,7 +112,7 @@ public class ImplUser extends ImplIServComAbstract<SysUser>
     @Override
     public SysUser selectKey(String key)
     {
-        SysUser entity = sysUserMapper.selectByPrimaryKey(Integer.getInteger(key));
+        SysUser entity = sysUserMapper.selectByPrimaryKey(Integer.parseInt(key));
         comResponseEntity = entity;
         return entity;
     }
