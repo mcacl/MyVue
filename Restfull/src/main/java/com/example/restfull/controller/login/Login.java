@@ -32,7 +32,6 @@ public class Login
     @RequestMapping(value = "/out")
     public ResponseEntity<?> loginout(@RequestBody SysUser sysUser)
     {
-
         ResponseEntity<?> responseEntity = new ResponseEntity(null, HttpStatus.OK);
         return responseEntity;
     }

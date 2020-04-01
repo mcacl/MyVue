@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.restfull.dao.SysMenuMapper">
+    <resultMap id="BaseResultMap" type="com.example.restfull.model.SysMenu">
+        <constructor>
+            <idArg column="menuid" javaType="java.lang.Integer" jdbcType="INTEGER" />
+            <arg column="name" javaType="java.lang.String" jdbcType="VARCHAR" />
+            <arg column="component" javaType="java.lang.String" jdbcType="VARCHAR" />
+            <arg column="icon" javaType="java.lang.String" jdbcType="VARCHAR" />
+            <arg column="pid" javaType="java.lang.Integer" jdbcType="INTEGER" />
+            <arg column="sort" javaType="java.lang.Integer" jdbcType="INTEGER" />
+            <arg column="time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+            <arg column="userid" javaType="java.lang.Integer" jdbcType="INTEGER" />
+            <arg column="enable" javaType="java.lang.Integer" jdbcType="INTEGER" />
+            <arg column="data" javaType="java.lang.String" jdbcType="VARCHAR" />
+            <arg column="username" javaType="java.lang.String" jdbcType="VARCHAR" />
+        </constructor>
+    </resultMap>
+    <sql id="Base_Column_List">
+    menuid, name, component, icon, pid, sort, time, userid,enable,data,username
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from sysmenu
+        where menuid = #{menuid,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from sysmenu
+    where menuid = #{menuid,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="com.example.restfull.model.SysMenu">
+    insert into sysmenu (menuid, name, component, 
+      icon, pid, sort, time, 
+      userid,enable,DATA ,username)
+    values (#{menuid,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{component,jdbcType=VARCHAR}, 
+      #{icon,jdbcType=VARCHAR}, #{pid,jdbcType=INTEGER}, #{sort,jdbcType=INTEGER}, #{time,jdbcType=TIMESTAMP}, 
+      #{userid,jdbcType=INTEGER},#{enable,jdbcType=INTEGER} ,${data,jdbcType=VARCHAR}  ,${username,jdbcType=VARCHAR} )
+  </insert>
+    <insert id="insertSelective" parameterType="com.example.restfull.model.SysMenu">
+        insert into sysmenu
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="menuid != null">
+                menuid,
+            </if>
+            <if test="name != null">
+                name,
+            </if>
+            <if test="component != null">
+                component,
+            </if>
+            <if test="icon != null">
+                icon,
+            </if>
+            <if test="pid != null">
+                pid,
+            </if>
+            <if test="sort != null">
+                sort,
+            </if>
+            <if test="time != null">
+                time,
+            </if>
+            <if test="userid != null">
+                userid,
+            </if>
+            <if test="enable != null">
+                enable,
+            </if>
+            <if test="data != null">
+                data,
+            </if>
+            <if test="username != null">
+                username,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="menuid != null">
+                #{menuid,jdbcType=INTEGER},
+            </if>
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="component != null">
+                #{component,jdbcType=VARCHAR},
+            </if>
+            <if test="icon != null">
+                #{icon,jdbcType=VARCHAR},
+            </if>
+            <if test="pid != null">
+                #{pid,jdbcType=INTEGER},
+            </if>
+            <if test="sort != null">
+                #{sort,jdbcType=INTEGER},
+            </if>
+            <if test="time != null">
+                #{time,jdbcType=TIMESTAMP},
+            </if>
+            <if test="userid != null">
+                #{userid,jdbcType=INTEGER},
+            </if>
+            <if test="enable != null">
+                #{enable,jdbcType=INTEGER},
+            </if>
+            <if test="data != null">
+                #{data,jdbcType=VARCHAR},
+            </if>
+            <if test="username != null">
+                #{username,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.example.restfull.model.SysMenu">
+        update sysmenu
+        <set>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="component != null">
+                component = #{component,jdbcType=VARCHAR},
+            </if>
+            <if test="icon != null">
+                icon = #{icon,jdbcType=VARCHAR},
+            </if>
+            <if test="pid != null">
+                pid = #{pid,jdbcType=INTEGER},
+            </if>
+            <if test="sort != null">
+                sort = #{sort,jdbcType=INTEGER},
+            </if>
+            <if test="time != null">
+                time = #{time,jdbcType=TIMESTAMP},
+            </if>
+            <if test="userid != null">
+                userid = #{userid,jdbcType=INTEGER},
+            </if>
+            <if test="enable != null">
+                enable = #{enable,jdbcType=INTEGER},
+            </if>
+            <if test="data != null">
+                DATA = #{data} ,
+            </if>
+            <if test="username != null">
+                username = #{username} ,
+            </if>
+        </set>
+        where menuid = #{menuid,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.example.restfull.model.SysMenu">
+    update sysmenu
+    set name = #{name,jdbcType=VARCHAR},
+      component = #{component,jdbcType=VARCHAR},
+      icon = #{icon,jdbcType=VARCHAR},
+      pid = #{pid,jdbcType=INTEGER},
+      sort = #{sort,jdbcType=INTEGER},
+      time = #{time,jdbcType=TIMESTAMP},
+      userid = #{userid,jdbcType=INTEGER},
+      enable = #{enable,jdbcType=INTEGER},
+      DATA =${data}
+      ,username=${username}
+    where menuid = #{menuid,jdbcType=INTEGER}
+  </update>
+    <select id="selectList" parameterType="com.example.restfull.model.SysMenu" resultMap="BaseResultMap">
+        SELECT * FROM sysmenu t where 1=1
+        <if test="name != null">AND NAME=#{name,jdbcType=VARCHAR}</if>
+        <if test="userid != null">AND userid=#{userid}</if>
+        <if test="enable !=null">AND enable=#{enable}</if>
+        ORDER BY t.pid,t.sort
+    </select>
+</mapper>

@@ -7,8 +7,9 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-/**
+/**1
  * 创建时间:2019/7/24
  * 创建人:pmc
  * 描述:
@@ -22,7 +23,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
     @Override
     public void configure(AuthenticationManagerBuilder auth) throws Exception
     {
-        auth.userDetailsService(implLoginUserDetailsService);
+        auth.userDetailsService(implLoginUserDetailsService).passwordEncoder(new BCryptPasswordEncoder());//加密
     }
 
     @Override
