@@ -19,10 +19,14 @@
 *.tar.gz
 *.rar
 
+### IntelliJ IDEA ###
+*.iws
+*.iml
+*.ipr
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-/.idea/libraries
+
 **/.idea/libraries
 **/.idea/dictionaries
-springcloud/.idea/.idea/workspace.xml
+**/.idea/workspace.xml
 **/node_modules

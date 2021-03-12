@@ -11,11 +11,7 @@
     <bookmark url="file://$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/login/Login.java" line="29" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2090b54-39e9-4c5d-ac5a-8d0bdd8f5d12" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/config/SecurityConfig.java" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/config/SecurityConfig.java" />
-      <change beforePath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/login/Login.java" afterPath="$PROJECT_DIR$/../Restfull/src/main/java/com/example/restfull/controller/login/Login.java" />
-    </list>
+    <list default="true" id="c2090b54-39e9-4c5d-ac5a-8d0bdd8f5d12" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/../Restfull/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -706,7 +702,7 @@
       <workItem from="1567675669031" duration="71355000" />
       <workItem from="1585642835201" duration="121000" />
       <workItem from="1585643050158" duration="2197000" />
-      <workItem from="1585720060989" duration="2482000" />
+      <workItem from="1585720060989" duration="2617000" />
     </task>
     <task id="LOCAL-00001" summary="动态组件使用">
       <created>1562925319852</created>
@@ -782,7 +778,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="484788000" />
+    <option name="totallyTimeSpent" value="484923000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -807,7 +803,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23010753" sideWeight="0.49944994" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2888889" sideWeight="0.418638" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2888889" sideWeight="0.418638" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.49749103" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3375" sideWeight="0.38494623" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
